@@ -12,7 +12,7 @@ public class AsteroidSpawner : MonoBehaviour
     public float XSpawn;
     public float YSpawn;
     public float ZSpawn;
-    public float AsteroidSpeed = 5f;
+    public float AsteroidSpeed = 8f;
     public bool CanSpawn = true;
     // Start is called before the first frame update
     void Start()

@@ -308,6 +308,7 @@ MonoBehaviour:
   AsteroidRig: {fileID: 0}
   speed: 5
   AsteroidSpeed: {x: 0, y: 0, z: 0}
+  Explosion: {fileID: 7598582955302121708, guid: 24c4ac4e78cfbae4fa85bffe716d54be, type: 3}
 --- !u!1 &5042085634437796911
 GameObject:
   m_ObjectHideFlags: 0

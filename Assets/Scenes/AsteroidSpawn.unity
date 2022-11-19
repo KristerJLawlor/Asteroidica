@@ -206,11 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &663194707 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1695497192, guid: 4ae4e83f96fa67f428e9473b18c3fed4, type: 3}
-  m_PrefabInstance: {fileID: 1511396456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +951,7 @@ PrefabInstance:
     - target: {fileID: 1863038619951970633, guid: 5b59d5d6234442b459c545fa62d6e651, type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 198365587299786030, guid: 0a3674a698518694c809dd4c9c589796, type: 3}
+      objectReference: {fileID: 7598582955302121708, guid: 24c4ac4e78cfbae4fa85bffe716d54be, type: 3}
     - target: {fileID: 1863038619951970633, guid: 5b59d5d6234442b459c545fa62d6e651, type: 3}
       propertyPath: AsteroidRig
       value: 
@@ -1065,7 +1060,7 @@ PrefabInstance:
     - target: {fileID: 6580060855001016219, guid: 65e618fb21869c240a0c6149f2311440, type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 663194707}
+      objectReference: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e618fb21869c240a0c6149f2311440, type: 3}
 --- !u!1001 &6341807963433911284
@@ -1078,7 +1073,7 @@ PrefabInstance:
     - target: {fileID: 1302234009695260280, guid: 09f224b0c7eb4074dbe8350ad11a9533, type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 663194707}
+      objectReference: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
     - target: {fileID: 6341807963324835472, guid: 09f224b0c7eb4074dbe8350ad11a9533, type: 3}
       propertyPath: m_RootOrder
       value: 4

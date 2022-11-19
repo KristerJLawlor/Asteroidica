@@ -6,7 +6,7 @@ public class AsteroidMovement : MonoBehaviour
 {
     public GameObject AsteroidObject;
     public Rigidbody AsteroidRig;
-    public float speed = 5f;
+    public float speed = 8f;
     public Vector3 AsteroidSpeed;
 
     public ParticleSystem Explosion;
