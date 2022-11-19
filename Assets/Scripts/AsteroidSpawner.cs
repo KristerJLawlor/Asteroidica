@@ -4,52 +4,53 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
+    //Attach script to camera
     public float SpawnTimer = .5f;
-    public GameObject Asteroid1;
-    public GameObject Asteroid2;
-    public GameObject Asteroid3;
+    public GameObject RandomAsteroid;
     public GameObject[] Asteroids;
     public Vector3 SpawnLocation;
-    public int XSpawn = -10;
-    public int YSpawn = 0;
-    public int ZSpawn = 0;
-    public float AsteroidSpeed = 2f;
+    public float XSpawn;
+    public float YSpawn;
+    public float ZSpawn;
+    public float AsteroidSpeed = 5f;
     public bool CanSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
         SpawnLocation = new Vector3(XSpawn, YSpawn, ZSpawn);
+        StartCoroutine(Spawning());
     }
 
     // Update is called once per frame
     void Update()
     {
-        YSpawn = Random.Range(-10, 10);
-        ZSpawn = Random.Range(-30, 30);
+        XSpawn = -40f;
+        YSpawn = Random.Range(-10f, 40f);
+        ZSpawn = Random.Range(-10f, 10f);
         SpawnLocation = new Vector3(XSpawn, YSpawn, ZSpawn);
-        AsteroidSpeed = Random.Range(0.5f, 5f);
-        if (CanSpawn) 
-        {
-            Spawn();
-            CanSpawn = false;
+        AsteroidSpeed = Random.Range(0.5f, 10f);
 
-        }
+        RandomAsteroid = Asteroids[Random.Range(0, 3)];
 
     }
 
     void Spawn()
     {
-        StartCoroutine(Waiting());
+        //StartCoroutine(Waiting());
 
     }
 
-    public IEnumerator Waiting()
+    public IEnumerator Spawning()
     {
-        //yield return new WaitForSeconds(SpawnTimer);
-        GameObject temp = GameObject.Instantiate(Asteroid1, SpawnLocation, Quaternion.identity);
-        temp.GetComponent<Rigidbody>().velocity = new Vector3(AsteroidSpeed, 0, 0);
-        yield return new WaitForSeconds(SpawnTimer);
-        CanSpawn = true;
+        while (CanSpawn == true)
+        {
+            yield return new WaitForSeconds(SpawnTimer);
+            GameObject temp = Instantiate(RandomAsteroid, SpawnLocation, Quaternion.identity);
+            temp.GetComponent<Rigidbody>().velocity = new Vector3(AsteroidSpeed, 0, 0);
+            //yield return new WaitForSeconds(SpawnTimer);
+            //CanSpawn = true;
+
+        }
 
     }
 
