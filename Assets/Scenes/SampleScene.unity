@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 963194231}
   - component: {fileID: 963194230}
   - component: {fileID: 963194232}
+  - component: {fileID: 963194233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -659,8 +660,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 6623061015683620636, guid: 8700da18acb4b234abccb7fc3965e5ad, type: 3}
+  laserCannonPrefab: {fileID: 4694480336497244750, guid: 777eec6ca31ac48488ac5514512c952e, type: 3}
+  selectedWeapon: {fileID: 0}
+  Wait: 0.3
   lastFire: 0
   canShoot: 0
+--- !u!114 &963194233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3a5f67c8712e64eaee5821aecbc651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 20
+  maxHP: 20
 --- !u!1 &1329320867
 GameObject:
   m_ObjectHideFlags: 0
