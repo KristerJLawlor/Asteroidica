@@ -6,7 +6,7 @@ public class AsteroidMovement : MonoBehaviour
 {
     public GameObject AsteroidObject;
     public Rigidbody AsteroidRig;
-    public float speed = 8f;
+    public float SpeedVar = 8f;
     public Vector3 AsteroidSpeed;
 
     public ParticleSystem Explosion;
@@ -16,7 +16,7 @@ public class AsteroidMovement : MonoBehaviour
     {
        AsteroidRig = GetComponent<Rigidbody>();
 
-        AsteroidSpeed = new Vector3(speed, 0, 0);
+        AsteroidSpeed = new Vector3(SpeedVar, 0, 0);
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class AsteroidMovement : MonoBehaviour
     {
         AsteroidRig.velocity = AsteroidSpeed;
 
-        if(AsteroidRig.position.x > 45f)
+        if(AsteroidRig.position.x > 180f)
         {
             Explode(AsteroidRig.position);
             Destroy(AsteroidObject);

@@ -7,11 +7,15 @@ public class AsteroidSpawner : MonoBehaviour
     //Attach script to camera
     public float SpawnTimer = .5f;
     public GameObject RandomAsteroid;
+    public GameObject RandomAsteroid1;
     public GameObject[] Asteroids;
     public Vector3 SpawnLocation;
+    public Vector3 SpawnLocation1;
     public float XSpawn;
     public float YSpawn;
     public float ZSpawn;
+    public float YSpawn1;
+    public float ZSpawn1;
     public float AsteroidSpeed = 8f;
     public bool CanSpawn = true;
     // Start is called before the first frame update
@@ -24,14 +28,19 @@ public class AsteroidSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        XSpawn = -40f;
-        YSpawn = Random.Range(-10f, 40f);
-        ZSpawn = Random.Range(-10f, 10f);
+        //Define the coordinates for the spawn points for both asteroids
+        XSpawn = -150f;
+        YSpawn = Random.Range(-70f, 0f);
+        ZSpawn = Random.Range(-30f, 30f);
         SpawnLocation = new Vector3(XSpawn, YSpawn, ZSpawn);
+        YSpawn1 = Random.Range(0f, 70f);
+        ZSpawn1 = Random.Range(-30f, 30f);
+        SpawnLocation1 = new Vector3(XSpawn, YSpawn1, ZSpawn1);
         AsteroidSpeed = Random.Range(0.5f, 10f);
 
+        // randomly get the asteroid prefab that will be spawned
         RandomAsteroid = Asteroids[Random.Range(0, 3)];
-
+        RandomAsteroid1 = Asteroids[Random.Range(0, 3)];
     }
 
     void Spawn()
@@ -45,10 +54,11 @@ public class AsteroidSpawner : MonoBehaviour
         while (CanSpawn == true)
         {
             yield return new WaitForSeconds(SpawnTimer);
-            GameObject temp = Instantiate(RandomAsteroid, SpawnLocation, Quaternion.identity);
-            temp.GetComponent<Rigidbody>().velocity = new Vector3(AsteroidSpeed, 0, 0);
-            //yield return new WaitForSeconds(SpawnTimer);
-            //CanSpawn = true;
+
+            //Spawn the two asteroids
+            GameObject temp1 = Instantiate(RandomAsteroid, SpawnLocation, Quaternion.identity);
+
+            GameObject temp2 = Instantiate(RandomAsteroid1, SpawnLocation1, Quaternion.identity);
 
         }
 

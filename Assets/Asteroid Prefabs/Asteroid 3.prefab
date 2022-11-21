@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AsteroidObject: {fileID: 6341807963325248146}
   AsteroidRig: {fileID: 0}
-  speed: 5
+  speed: 0
   AsteroidSpeed: {x: 0, y: 0, z: 0}
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
 --- !u!1 &6341807963325265992

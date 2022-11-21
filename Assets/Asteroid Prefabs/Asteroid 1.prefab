@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1863038619951851836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 27.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1863038619952171790}
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AsteroidObject: {fileID: 1863038619951851836}
-  AsteroidRig: {fileID: 0}
-  speed: 5
+  AsteroidRig: {fileID: 1863038619955047050}
+  SpeedVar: 8
   AsteroidSpeed: {x: 0, y: 0, z: 0}
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
 --- !u!1 &1863038619951859840
