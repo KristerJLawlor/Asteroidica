@@ -71,7 +71,7 @@ public class SceneChanger : MonoBehaviour
         if (!beenUsed)
         {
             Debug.Log("Loading game scene");
-            SceneManager.LoadScene(2);//Or whatever index you want.
+            SceneManager.LoadScene(4);//Or whatever index you want.
             p1.SetActive(false);
         }
         else
@@ -85,7 +85,7 @@ public class SceneChanger : MonoBehaviour
         if (!beenUsed)
         {
             Debug.Log("Loading game scene");
-            SceneManager.LoadScene(3);//Or whatever index you want.
+            SceneManager.LoadScene(6);//Or whatever index you want.
             p1.SetActive(false);
         }
         else
