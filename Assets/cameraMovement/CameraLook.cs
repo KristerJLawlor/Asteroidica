@@ -79,10 +79,10 @@ public class CameraLook : MonoBehaviour
                 myRig.velocity = myRig.velocity.normalized*maxSpeed;
             }
             //Auto Decelleration
-            /*Vector3 oldVel = new Vector3(myRig.velocity.x, 0, myRig.velocity.z);
+            Vector3 oldVel = new Vector3(myRig.velocity.x, 0, myRig.velocity.z);
             Vector3 velDif = newVel - oldVel;
             myRig.velocity += velDif.normalized * acceleration * Time.deltaTime;
-            */
+            
             
 
 
