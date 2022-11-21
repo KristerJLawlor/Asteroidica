@@ -22,6 +22,7 @@ public class CameraLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         Cursor.lockState=CursorLockMode.Locked;
         myRig = GetComponent<Rigidbody>();
         StartCoroutine(Wait());
@@ -81,7 +82,7 @@ public class CameraLook : MonoBehaviour
             //Auto Decelleration
             Vector3 oldVel = new Vector3(myRig.velocity.x, 0, myRig.velocity.z);
             Vector3 velDif = newVel - oldVel;
-            myRig.velocity += velDif.normalized * acceleration * Time.deltaTime;
+            myRig.velocity += velDif.normalized * acceleration/3 * Time.deltaTime;
             
             
 
