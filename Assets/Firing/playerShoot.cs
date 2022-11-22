@@ -32,23 +32,27 @@ public class playerShoot : MonoBehaviour
             lastFire = false;
         }
     }
-    // Update is called once per frame
-    void Update()
+    public void weaponSwap(InputAction.CallbackContext s)
     {
-        
-        if (Input.GetKeyDown("space"))
+        if (s.phase == InputActionPhase.Performed)
         {
             if (selectedWeapon == laserPrefab)
             {
                 selectedWeapon = laserCannonPrefab;
                 ROF = .001f;
             }
-            else 
+            else
             {
                 selectedWeapon = laserPrefab;
                 ROF = .3f;
             }
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
+        
         if (lastFire && canShoot)
         {
             GameObject temp = GameObject.Instantiate(selectedWeapon, this.GetComponent<CameraLook>().myRig.position + this.transform.forward * .9f, this.transform.rotation);

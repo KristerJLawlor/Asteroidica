@@ -642,6 +642,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4df0cb44-dc3e-4d8a-8be1-dbd9f50d9975
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194232}
+        m_TargetAssemblyTypeName: playerShoot, Assembly-CSharp
+        m_MethodName: weaponSwap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2d5c7b8f-c0d9-4628-a242-33f5cedecc54
+    m_ActionName: Player/weaponSwap[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -662,7 +678,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 6623061015683620636, guid: 8700da18acb4b234abccb7fc3965e5ad, type: 3}
   laserCannonPrefab: {fileID: 4694480336497244750, guid: 777eec6ca31ac48488ac5514512c952e, type: 3}
   selectedWeapon: {fileID: 0}
-  Wait: 0.3
+  ROF: 0.3
   lastFire: 0
   canShoot: 0
 --- !u!114 &963194233
