@@ -148,9 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AsteroidObject: {fileID: 5586434366151112209}
-  AsteroidRig: {fileID: 0}
-  speed: 5
+  AsteroidRig: {fileID: -7491766314779945870}
+  SpeedVar: 8
   AsteroidSpeed: {x: 0, y: 0, z: 0}
+  Explosion: {fileID: 0}
 --- !u!54 &-7491766314779945870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5586434366151112209}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
