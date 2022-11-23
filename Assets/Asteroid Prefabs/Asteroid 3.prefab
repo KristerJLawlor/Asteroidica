@@ -261,6 +261,8 @@ GameObject:
   - component: {fileID: 6341807963328321538}
   - component: {fileID: 6341807963313910272}
   - component: {fileID: 1302234009695260280}
+  - component: {fileID: 2747837540763662809}
+  - component: {fileID: 5094013800805845005}
   m_Layer: 0
   m_Name: Asteroid 3
   m_TagString: Enemy
@@ -327,9 +329,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AsteroidObject: {fileID: 6341807963325248146}
   AsteroidRig: {fileID: 0}
-  speed: 0
+  SpeedVar: 8
   AsteroidSpeed: {x: 0, y: 0, z: 0}
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
+--- !u!114 &2747837540763662809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341807963325248146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d1a89a8e37e02459b62eb1a0058c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &5094013800805845005
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341807963325248146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.9
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6341807963325265992
 GameObject:
   m_ObjectHideFlags: 0
