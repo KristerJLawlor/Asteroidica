@@ -59,7 +59,7 @@ public class CameraLook : MonoBehaviour
                  temp = temp.normalized * (3.14f / 2);
              }*/
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + temp);
-            Debug.Log(this.transform.rotation.eulerAngles);
+            //Debug.Log(this.transform.rotation.eulerAngles);
             Vector3 Check = this.transform.rotation.eulerAngles;
             if (Check.x > 50 && Check.x < 180)
             {
