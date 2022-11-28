@@ -18,8 +18,11 @@ public class weaponScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        GameObject.Destroy(this.gameObject);
+        if (collision.gameObject.tag != "laser")
+        {
+            GameObject.Destroy(this.gameObject);
 
+        }
     }
     // Update is called once per frame
     void Update()

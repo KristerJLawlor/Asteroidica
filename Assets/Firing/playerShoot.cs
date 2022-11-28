@@ -7,6 +7,7 @@ public class playerShoot : MonoBehaviour
 {
     public GameObject laserPrefab;
     public GameObject laserCannonPrefab;
+    public bool scatterShot = true;
     public GameObject selectedWeapon;
     public float ROF = .3f;
     public bool lastFire=false;
@@ -58,7 +59,16 @@ public class playerShoot : MonoBehaviour
             GameObject temp = GameObject.Instantiate(selectedWeapon, this.GetComponent<CameraLook>().myRig.position + this.transform.forward * .9f, this.transform.rotation);
             //temp.GetComponent<Rigidbody>().rotation = Quaternion.Euler(0,90,90);
             temp.transform.up = this.transform.forward;
-            temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 8 + this.GetComponent<CameraLook>().myRig.velocity;
+            temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 32 + this.GetComponent<CameraLook>().myRig.velocity;
+            if (scatterShot)
+            {
+                for (int i = 0; i < 4; i++) { 
+                temp = GameObject.Instantiate(selectedWeapon, this.GetComponent<CameraLook>().myRig.position + this.transform.forward * .9f, this.transform.rotation);
+                //temp.GetComponent<Rigidbody>().rotation = Quaternion.Euler(0,90,90);
+                temp.transform.up = this.transform.forward;
+                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 32 + this.GetComponent<CameraLook>().myRig.velocity + this.transform.right * Random.Range(-1.0f, 1.0f) + this.transform.up * Random.Range(-1.0f, 1.0f);
+            }
+            }
             if (selectedWeapon == laserCannonPrefab)
             {
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 100 + this.GetComponent<CameraLook>().myRig.velocity;
