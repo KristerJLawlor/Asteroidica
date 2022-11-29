@@ -38,4 +38,12 @@ public class SceneCompleter : MonoBehaviour
             beenUsed = true;
         }
     }
+    public void GoToNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().buildIndex + 1 > PlayerPrefs.GetInt("LevelAt"))
+        {
+            PlayerPrefs.SetInt("LevelAt", SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }

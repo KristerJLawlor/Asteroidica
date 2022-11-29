@@ -94,4 +94,26 @@ public class SceneChanger : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+    public void switchScenesLevel()
+    {
+        if (!beenUsed)
+        {
+            Debug.Log("Loading game scene");
+            SceneManager.LoadScene(0);//Or whatever index you want.
+            p1.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Loading Menu scene");
+            SceneManager.LoadScene(0);
+        }
+    }
+    public void GoToNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex + 1 > PlayerPrefs.GetInt("levelAt"))
+        {
+            PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }
