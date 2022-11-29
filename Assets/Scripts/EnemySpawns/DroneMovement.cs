@@ -62,19 +62,24 @@ public class DroneMovement : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
 
-        if(HP <= 0)
+        if (collision.gameObject.tag == "Missile" || collision.gameObject.tag=="Player")
+        {
+            HP -= 5;
+        }
+        else 
+        {
+            HP--;
+        }
+            if (HP <= 0)
         {
             Explode(myRig.position);
             Destroy(this.gameObject);
         }
-        else
-        {
-            HP--;
-        }
+        
         
     }
 
-    public void OnCollisionStay(Collision collision)
+    /*public void OnCollisionStay(Collision collision)
     {
         if (HP <= 0)
         {
@@ -86,6 +91,7 @@ public class DroneMovement : MonoBehaviour
             HP--;
         }
     }
+    */
 
     public void Explode(Vector3 position)
     {
