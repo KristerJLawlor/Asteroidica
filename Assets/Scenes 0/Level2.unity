@@ -9507,8 +9507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3d7ec3afe228b4e972da93c7183695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 6623061015683620636, guid: 8700da18acb4b234abccb7fc3965e5ad, type: 3}
-  laserCannonPrefab: {fileID: 1012013889074000, guid: 6dc968b09945e3845bdbf41de444f21c, type: 3}
+  laserPrefab: {fileID: 1012013889074000, guid: 6dc968b09945e3845bdbf41de444f21c, type: 3}
+  laserCannonPrefab: {fileID: 1012013889074000, guid: 2c05f9810c17f6e4ca8fe340b8b572c5, type: 3}
   scatterShot: 1
   selectedWeapon: {fileID: 0}
   ROF: 0.3
