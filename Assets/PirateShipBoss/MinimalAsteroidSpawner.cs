@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidSpawner : MonoBehaviour
+public class MinimalAsteroidSpawner : MonoBehaviour
 {
     //Attach script to camera
     public float SpawnTimer = .5f;
@@ -29,14 +29,13 @@ public class AsteroidSpawner : MonoBehaviour
     void Update()
     {
         //Define the coordinates for the spawn points for both asteroids
-        XSpawn = -150f;
+        XSpawn = -200f;
         YSpawn = Random.Range(-70f, 0f);
-        ZSpawn = Random.Range(-30f, 30f);
+        ZSpawn = Random.Range(-150f, 150f);
         SpawnLocation = new Vector3(XSpawn, YSpawn, ZSpawn);
         YSpawn1 = Random.Range(0f, 70f);
-        ZSpawn1 = Random.Range(-30f, 30f);
+        ZSpawn1 = Random.Range(-150f, 150f);
         SpawnLocation1 = new Vector3(XSpawn, YSpawn1, ZSpawn1);
-        AsteroidSpeed = Random.Range(0.5f, 10f);
 
         // randomly get the asteroid prefab that will be spawned
         RandomAsteroid = Asteroids[Random.Range(0, 3)];

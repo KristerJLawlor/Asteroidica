@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class PirateShipScript : MonoBehaviour
 {
+    public Rigidbody myRig;
+
     //List of checkpoints for the ship's navigation
     public Vector3 goal1;
     public Vector3 goal2;
@@ -25,6 +27,8 @@ public class PirateShipScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        myRig = GetComponent<Rigidbody>();
+
         myNav = this.gameObject.GetComponent<NavMeshAgent>();
         goal1 = GameObject.Find("Goal1").transform.position;
         goal2 = GameObject.Find("Goal2").transform.position;
