@@ -6,7 +6,7 @@ public class takingDamage : MonoBehaviour
 {
     public int HP = 20;
     public int maxHP = 20;
-
+    public HealthBar healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,6 @@ public class takingDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        healthbar.SetHP(HP);
     }
 }
