@@ -9,10 +9,10 @@ public class LevelSelecter : MonoBehaviour
     void Start()
     {
         int levelAt = PlayerPrefs.GetInt("levelAt", 1);
-
         for(int i = 0; i < lvlButtons.Length;i++)
         {
             if (levelAt < 3) {
+
                 if (i + 1 > levelAt)
                     lvlButtons[i].interactable = false;
             }
