@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 96087322685909143}
   m_Layer: 0
   m_Name: TorpedoPrefab_reset
-  m_TagString: Undefined
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
