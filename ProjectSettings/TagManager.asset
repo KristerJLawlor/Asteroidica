@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - laser
   - Missile
+  - Drone
   layers:
   - Default
   - TransparentFX

@@ -12,11 +12,18 @@ public class takingDamage : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("Blarg");
         if (collision.gameObject.tag != "laser")
         {
+            
             HP--;
+        }
+        if (collision.gameObject.tag == "Drone")
+        {
+            collision.GetComponent<DroneMovement>().Explode(collision.GetComponent<DroneMovement>().myRig.position);
+            Destroy(collision.gameObject);
         }
     }
 
