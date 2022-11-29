@@ -77,6 +77,9 @@ public class playerShoot : MonoBehaviour
             if (selectedWeapon == laserCannonPrefab)
             {
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 100 + this.GetComponent<CameraLook>().myRig.velocity;
+                //TESTING
+                temp.GetComponent<Rigidbody>().transform.position = new Vector3(temp.GetComponent<Rigidbody>().transform.position.x, temp.GetComponent<Rigidbody>().transform.position.y -.25f, temp.GetComponent<Rigidbody>().transform.position.z);
+                //TESTING
             }
             canShoot = false;
             StartCoroutine(Reload());
