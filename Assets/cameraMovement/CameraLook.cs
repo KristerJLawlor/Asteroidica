@@ -12,7 +12,7 @@ public class CameraLook : MonoBehaviour
     float rotSpeed = .005f;
     float pitchSpeed = 0;
     float yawSpeed = 0;
-    bool canLook=false;
+    public bool canLook=false;
     Vector3 lastInput;
     float Speed = 5;
     float acceleration = 12f;
