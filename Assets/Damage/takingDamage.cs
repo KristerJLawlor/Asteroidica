@@ -14,7 +14,10 @@ public class takingDamage : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        HP--;
+        if (collision.gameObject.tag != "laser")
+        {
+            HP--;
+        }
     }
 
     // Update is called once per frame

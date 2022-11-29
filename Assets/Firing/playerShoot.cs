@@ -8,6 +8,7 @@ public class playerShoot : MonoBehaviour
     public GameObject laserPrefab;
     public GameObject laserCannonPrefab;
     public bool scatterShot=false;
+    public GameObject missilePrefab;
     public GameObject selectedWeapon;
     public float ROF = .3f;
     public bool lastFire=false;
@@ -16,6 +17,7 @@ public class playerShoot : MonoBehaviour
     void Start()
     {
         selectedWeapon = laserPrefab;
+        scatterShot = false;
     }
     public IEnumerator Reload()
     {
@@ -42,15 +44,20 @@ public class playerShoot : MonoBehaviour
     {
         if (s.phase == InputActionPhase.Performed)
         {
-            if (selectedWeapon == laserPrefab && scatterShot==false)
+            if (selectedWeapon == laserPrefab && scatterShot == false)
             {
                 scatterShot = true;
             }
             else if (selectedWeapon == laserPrefab && scatterShot)
             {
                 selectedWeapon = laserCannonPrefab;
-                    ROF = .001f;
+                ROF = .001f;
                 scatterShot = false;
+            }
+            else if (selectedWeapon == laserCannonPrefab)
+            {
+                selectedWeapon = missilePrefab;
+                ROF = 2;
             }
             else
             {
@@ -82,9 +89,13 @@ public class playerShoot : MonoBehaviour
             if (selectedWeapon == laserCannonPrefab)
             {
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 100 + this.GetComponent<CameraLook>().myRig.velocity;
-                //TESTING
-                temp.GetComponent<Rigidbody>().transform.position = new Vector3(temp.GetComponent<Rigidbody>().transform.position.x, temp.GetComponent<Rigidbody>().transform.position.y -.25f, temp.GetComponent<Rigidbody>().transform.position.z);
-                //TESTING
+                //USE THIS TO MOVE LAZER OFF CAMERA FACE
+                temp.GetComponent<Rigidbody>().transform.position = new Vector3(temp.GetComponent<Rigidbody>().transform.position.x, temp.GetComponent<Rigidbody>().transform.position.y -1f, temp.GetComponent<Rigidbody>().transform.position.z);
+                //USE THIS TO MOVE LAZER OFF CAMERA FACE
+            }
+            if (selectedWeapon == missilePrefab)
+            {
+                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 20 + this.GetComponent<CameraLook>().myRig.velocity;
             }
             canShoot = false;
             StartCoroutine(Reload());
