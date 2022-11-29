@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 6623061015683620636, guid: 8700da18acb4b234abccb7fc3965e5ad, type: 3}
   laserCannonPrefab: {fileID: 4694480336497244750, guid: 777eec6ca31ac48488ac5514512c952e, type: 3}
+  scatterShot: {fileID: 6623061015683620636, guid: 8700da18acb4b234abccb7fc3965e5ad, type: 3}
   selectedWeapon: {fileID: 0}
   ROF: 0.3
   lastFire: 0

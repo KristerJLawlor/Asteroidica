@@ -7,7 +7,7 @@ public class playerShoot : MonoBehaviour
 {
     public GameObject laserPrefab;
     public GameObject laserCannonPrefab;
-    public bool scatterShot = true;
+    public bool scatterShot=false;
     public GameObject selectedWeapon;
     public float ROF = .3f;
     public bool lastFire=false;
@@ -37,10 +37,15 @@ public class playerShoot : MonoBehaviour
     {
         if (s.phase == InputActionPhase.Performed)
         {
-            if (selectedWeapon == laserPrefab)
+            if (selectedWeapon == laserPrefab && scatterShot==false)
+            {
+                scatterShot = true;
+            }
+            else if (selectedWeapon == laserPrefab && scatterShot)
             {
                 selectedWeapon = laserCannonPrefab;
-                ROF = .001f;
+                    ROF = .001f;
+                scatterShot = false;
             }
             else
             {
