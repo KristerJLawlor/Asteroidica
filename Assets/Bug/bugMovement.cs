@@ -33,27 +33,32 @@ public class bugMovement : MonoBehaviour
             if (goal == 0)
             {
                 myNav.destination = goal1;
-                myNav.Resume();
+                //myNav.Resume();
+                myNav.isStopped = false;
             }
             if (goal == 1)
             {
                 myNav.destination = goal2;
-                myNav.Resume();
+                //myNav.Resume();
+                myNav.isStopped = false;
             }
             if (goal == 2)
             {
                 myNav.destination = goal3;
-                myNav.Resume();
+                //myNav.Resume();
+                myNav.isStopped = false;
             }
             if (goal == 3)
             {
                 myNav.destination = goal4;
-                myNav.Resume();
+                //myNav.Resume();
+                myNav.isStopped = false;
             }
             if (goal == 4)
             {
                 myNav.destination = goal5;
-                myNav.Resume();
+                //myNav.Resume();
+                myNav.isStopped = false;
             }
         }
     }
