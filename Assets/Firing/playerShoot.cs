@@ -27,10 +27,15 @@ public class playerShoot : MonoBehaviour
         if (c.phase == InputActionPhase.Started)
         {
             lastFire = true;
+            if (lastFire && selectedWeapon == laserCannonPrefab)
+            {
+                this.GetComponent<CameraLook>().canLook = false;
+            }
         }
         else if (c.phase == InputActionPhase.Canceled)
         {
             lastFire = false;
+            this.GetComponent<CameraLook>().canLook = true;
         }
     }
     public void weaponSwap(InputAction.CallbackContext s)
