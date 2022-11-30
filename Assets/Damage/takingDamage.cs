@@ -14,7 +14,6 @@ public class takingDamage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Blarg");
         if (collision.gameObject.tag != "laser")
         {
             

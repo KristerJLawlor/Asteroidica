@@ -10321,6 +10321,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef80df0fa77e4c54a90030f4411bb0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &815136377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6467570865466806857, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
+  m_PrefabInstance: {fileID: 815136375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173df81b03b75744e9a3a4c3a23cd43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &815499118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29974,6 +29985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+      propertyPath: scoreBar
+      value: 
+      objectReference: {fileID: 815136377}
     - target: {fileID: 7476970275355913809, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -29982,6 +29997,10 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1786706634}
+    - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+      propertyPath: indicater
+      value: 
+      objectReference: {fileID: 815136376}
     - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: indicator
       value: 
