@@ -13,6 +13,7 @@ public class playerShoot : MonoBehaviour
     public float ROF = .3f;
     public bool lastFire=false;
     public bool canShoot=false;
+    public WeaponIndicater indicater;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,21 +46,25 @@ public class playerShoot : MonoBehaviour
         {
             if (selectedWeapon == laserPrefab )
             {
+                indicater.setActiveWeapon(1);
                 selectedWeapon = scattershotPrefab;
             }
             else if (selectedWeapon == scattershotPrefab)
             {
+                indicater.setActiveWeapon(2);
                 selectedWeapon = laserCannonPrefab;
                 ROF = .001f;
                 
             }
             else if (selectedWeapon == laserCannonPrefab)
             {
+                indicater.setActiveWeapon(3);
                 selectedWeapon = missilePrefab;
                 ROF = 2;
             }
             else
             {
+                indicater.setActiveWeapon(0);
                 selectedWeapon = laserPrefab;
                 ROF = .3f;
             }
