@@ -16,12 +16,14 @@ public class WeaponIndicater : MonoBehaviour
         ScatterShot.color = Color.grey;
         Laser.color = Color.grey;
         Rocket.color = Color.grey;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+       
     }
     public void setActiveWeapon(int weapon)
     {
