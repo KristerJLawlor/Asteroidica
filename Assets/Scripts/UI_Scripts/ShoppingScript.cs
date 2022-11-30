@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class ShoppingScript : MonoBehaviour
 {
-    public GameObject Player;
+    //public GameObject Player;
     public int price;
     public Button thisButton;
     public bool isPurchased = false;
+    int resource = PlayerPrefs.GetInt("Resource", 0);
     // Start is called before the first frame update
     void Start()
     {
-        
+        //int resource = PlayerPrefs.GetInt("Resource", 1);
     }
 
     // Update is called once per frame
@@ -20,22 +21,37 @@ public class ShoppingScript : MonoBehaviour
     {
         
     }
-    int PurchaseItem(int resource)
+    public void PurchaseItem()
     {
-        if(resource > price)
+        if (!isPurchased)
         {
-            resource = resource - price;
-            isPurchased = true;
-            return resource;
+            if (resource >= price)
+            {
+                resource = resource - price;
+                isPurchased = true;
+                PlayerPrefs.SetInt("ShopSetDefault", 1);
+                thisButton.interactable = false;
+                PlayerPrefs.SetInt("Resource", resource);
+            }
+            else
+            {
+                thisButton.image.color = Color.red;
+                StartCoroutine(Wait());
+                PlayerPrefs.SetInt("Resource", resource);
+            }
         }
         else
         {
-            thisButton.image.color = Color.red;
-            return resource;
+            thisButton.interactable = false;
         }
     }
-    bool isPurchasedFunction()
+    public bool isPurchasedFunction()
     {
         return isPurchased;
+    }
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        thisButton.image.color = Color.white;
     }
 }
