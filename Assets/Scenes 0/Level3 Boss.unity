@@ -28481,7 +28481,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202448857}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5, y: 4.5, z: 5}
@@ -28521,6 +28521,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a5d1985603b014c89feb30d248afe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1202448871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202448857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3df8e56dac91064faad1d17a9f5bfc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossRig: {fileID: 1202448866}
+  HP: 1500
+  MaxHP: 1500
+  Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
 --- !u!4 &1203035069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5042085634438014751, guid: 65e618fb21869c240a0c6149f2311440, type: 3}
@@ -34761,10 +34777,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: myRig
-      value: 
-      objectReference: {fileID: 1202448866}
     - target: {fileID: 389086578607723327, guid: a4da64a4d2d29384989139ec555d2823, type: 3}
       propertyPath: m_RootOrder
       value: 11

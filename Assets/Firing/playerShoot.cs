@@ -46,25 +46,25 @@ public class playerShoot : MonoBehaviour
         {
             if (selectedWeapon == laserPrefab )
             {
-                indicater.setActiveWeapon(1);
+                //indicater.setActiveWeapon(1);
                 selectedWeapon = scattershotPrefab;
             }
             else if (selectedWeapon == scattershotPrefab)
             {
-                indicater.setActiveWeapon(2);
+                //indicater.setActiveWeapon(2);
                 selectedWeapon = laserCannonPrefab;
                 ROF = .001f;
                 
             }
             else if (selectedWeapon == laserCannonPrefab)
             {
-                indicater.setActiveWeapon(3);
+                //indicater.setActiveWeapon(3);
                 selectedWeapon = missilePrefab;
                 ROF = 2;
             }
             else
             {
-                indicater.setActiveWeapon(0);
+                //indicater.setActiveWeapon(0);
                 selectedWeapon = laserPrefab;
                 ROF = .3f;
             }

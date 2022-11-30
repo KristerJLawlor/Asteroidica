@@ -14603,6 +14603,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4126004851240530, guid: ed39cc04d82766e4ca22f581a6644cf7, type: 3}
   m_PrefabInstance: {fileID: 834895061}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &689189936
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689189929}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &689189937
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689189929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!114 &689189938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689189929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980b0962e837f75408b15bf6303822d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossRig: {fileID: 689189936}
+  HP: 100
+  MaxHP: 100
+  Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
 --- !u!4 &690681509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1863038619952198860, guid: 5b59d5d6234442b459c545fa62d6e651, type: 3}
@@ -32493,7 +32539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913801, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -148
+      value: -63.9
       objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913801, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32501,7 +32547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913801, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913801, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_LocalRotation.w
