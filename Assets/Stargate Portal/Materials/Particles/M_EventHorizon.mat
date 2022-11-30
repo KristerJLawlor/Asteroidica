@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_EventHorizon
   m_Shader: {fileID: 4800000, guid: 1847ad376513c5241852c9a28fba9203, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _COLORADDSUBDIFF_ON
@@ -21,6 +23,7 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - GRABPASS
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
