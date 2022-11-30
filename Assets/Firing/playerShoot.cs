@@ -99,6 +99,7 @@ public class playerShoot : MonoBehaviour
             }
             if (selectedWeapon == missilePrefab)
             {
+                temp.transform.forward = this.transform.forward *-1;
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 20 + this.GetComponent<CameraLook>().myRig.velocity;
             }
             canShoot = false;

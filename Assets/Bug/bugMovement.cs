@@ -27,7 +27,7 @@ public class bugMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (myNav.remainingDistance == 0)
+        if (myNav.remainingDistance <= 0.1f)
         {
             goal = Random.Range(0, 5);
             if (goal == 0)

@@ -24,14 +24,14 @@ public class asteroidDamage : MonoBehaviour
         Cam.GetComponent<CameraLook>().score = score;
         //Assuning this is a laser
         GetComponent<AsteroidMovement>().Explode(this.transform.position);
-        if (pickupSpawn % 4 == 0)
-        {
-        //    GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-        }
-        else if (ammoSpawn % 5 == 0)
-        {
+        //if (pickupSpawn % 4 == 0)
+        //{
+            GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        //}
+        //else if (ammoSpawn % 5 == 0)
+        //{
         //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-        }
+        //}
 
     }
     public IEnumerator DestroyMe()
