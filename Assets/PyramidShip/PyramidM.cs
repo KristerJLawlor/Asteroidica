@@ -20,11 +20,11 @@ public class PyramidM : MonoBehaviour
     void Update()
     {
         //make pyramid go up and down
-        if(myRig.transform.position.y <= -10)
+        if(myRig.transform.position.y <= -20)
         {
             myRig.velocity = new Vector3(0, 1, 0);
         }
-        if (myRig.transform.position.y >= 10)
+        if (myRig.transform.position.y >= 20)
         {
             myRig.velocity = new Vector3(0, -1, 0);
         }
