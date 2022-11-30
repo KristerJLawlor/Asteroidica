@@ -25,6 +25,14 @@ public class takingDamage : MonoBehaviour
             collision.GetComponent<DroneMovement>().Explode(collision.GetComponent<DroneMovement>().myRig.position);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Ammo")
+        {
+            this.GetComponent<CameraLook>().ammoCount += 5;
+        }
+        if (collision.gameObject.tag == "Drop")
+        {
+            this.GetComponent<CameraLook>().currency += 100;
+        }
     }
 
     // Update is called once per frame

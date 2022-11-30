@@ -17,6 +17,9 @@ public class CameraLook : MonoBehaviour
     float Speed = 5;
     float acceleration = 12f;
     float maxSpeed = 8f;
+    public float currency = 0;
+    public float ammoCount = 0;
+    public float score = 0;
 
     
     // Start is called before the first frame update
@@ -88,6 +91,7 @@ public class CameraLook : MonoBehaviour
 
 
         }
+        
     }
     public void onLook(InputAction.CallbackContext l)
     {

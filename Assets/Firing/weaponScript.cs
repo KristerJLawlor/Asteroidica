@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class weaponScript : MonoBehaviour
 {
-    public float TTL = 2;
+    public float TTL;
+    
     // Start is called before the first frame update
     void Start()
     {

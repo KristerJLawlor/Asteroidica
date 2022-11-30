@@ -8,6 +8,8 @@ TagManager:
   - laser
   - Missile
   - Drone
+  - Drop
+  - Ammo
   layers:
   - Default
   - TransparentFX
