@@ -8,7 +8,8 @@ public class asteroidDamage : MonoBehaviour
     // Start is called before the first frame update
     public GameObject pickup;
     public GameObject ammo;
-    public float score;
+    public GameObject Cam;
+    public int score;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class asteroidDamage : MonoBehaviour
         int pickupSpawn = Random.Range(1, 100);
         int ammoSpawn = Random.Range(1, 100);
         score += 100;
+        Cam.GetComponent<CameraLook>().score = score;
         //Assuning this is a laser
         GetComponent<AsteroidMovement>().Explode(this.transform.position);
         if (pickupSpawn % 4 == 0)
