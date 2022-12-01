@@ -7,6 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     public bool beenUsed = false;
     public GameObject p1;
+    public static int ROF = 0;
     // Start is called before the first frame update
     void Start()
     {

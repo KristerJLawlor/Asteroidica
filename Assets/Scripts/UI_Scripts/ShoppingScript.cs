@@ -10,6 +10,7 @@ public class ShoppingScript : MonoBehaviour
     public Button thisButton;
     public bool isPurchased = false;
     int resource = PlayerPrefs.GetInt("Resource", 0);
+    public int ShopUpgradeIndication;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,10 @@ public class ShoppingScript : MonoBehaviour
             {
                 resource = resource - price;
                 isPurchased = true;
-                PlayerPrefs.SetInt("ShopSetDefault", 1);
+                PlayerPrefs.SetInt("ShopSetDefault", ShopUpgradeIndication);
                 thisButton.interactable = false;
                 PlayerPrefs.SetInt("Resource", resource);
+
             }
             else
             {
