@@ -9,7 +9,7 @@ public class ShoppingScript : MonoBehaviour
     public int price;
     public Button thisButton;
     public bool isPurchased = false;
-    int resource = PlayerPrefs.GetInt("Resource", 0);
+    int resource;
     public int ShopUpgradeIndication;
     // Start is called before the first frame update
     void Start()
@@ -30,16 +30,16 @@ public class ShoppingScript : MonoBehaviour
             {
                 resource = resource - price;
                 isPurchased = true;
-                PlayerPrefs.SetInt("ShopSetDefault", ShopUpgradeIndication);
+                //PlayerPrefs.SetInt("ShopSetDefault", ShopUpgradeIndication);
                 thisButton.interactable = false;
-                PlayerPrefs.SetInt("Resource", resource);
+                //PlayerPrefs.SetInt("Resource", resource);
 
             }
             else
             {
                 thisButton.image.color = Color.red;
                 StartCoroutine(Wait());
-                PlayerPrefs.SetInt("Resource", resource);
+                //PlayerPrefs.SetInt("Resource", resource);
             }
         }
         else
@@ -55,5 +55,9 @@ public class ShoppingScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         thisButton.image.color = Color.white;
+    }
+    public void Awake()
+    {
+        //resource = PlayerPrefs.GetInt("Resource", 0);
     }
 }
