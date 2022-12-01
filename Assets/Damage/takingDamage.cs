@@ -14,7 +14,7 @@ public class takingDamage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "laser" || collision.gameObject.tag=="Drop" || collision.gameObject.tag=="Ammo")
+        if (collision.gameObject.tag != "laser" && collision.gameObject.tag != "Drop" && collision.gameObject.tag != "Ammo")
         {
             
             HP-=2;
@@ -27,7 +27,7 @@ public class takingDamage : MonoBehaviour
         }
         if (collision.gameObject.tag == "Ammo")
         {
-            this.GetComponent<CameraLook>().ammoCount += 5;
+            this.GetComponent<CameraLook>().ammoCount += 3;
         }
         if (collision.gameObject.tag == "Drop")
         {

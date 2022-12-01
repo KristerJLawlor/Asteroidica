@@ -23,8 +23,7 @@ public class MediumAsteroidDamage : MonoBehaviour
         {
             isDead = true;
             StartCoroutine(DestroyMe());
-            int pickupSpawn = Random.Range(1, 100);
-            int ammoSpawn = Random.Range(1, 100);
+            
             score += 100;
             GameObject.FindObjectOfType<CameraLook>().score += score;
             //Assuning this is a laser
@@ -38,14 +37,16 @@ public class MediumAsteroidDamage : MonoBehaviour
     }
     public IEnumerator DestroyMe()
     {
-        //if (pickupSpawn % 4 == 0)
-        //{
+        int pickupSpawn = Random.Range(1, 100);
+        int ammoSpawn = Random.Range(1, 100);
+        if (pickupSpawn % 4 == 0)
+        {
         GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-        //}
-        //else if (ammoSpawn % 5 == 0)
-        //{
-        //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-        //}
+        }
+        else if (ammoSpawn % 5 == 0)
+        {
+            GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        }
         GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.up * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position - this.transform.right * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.right * 3);

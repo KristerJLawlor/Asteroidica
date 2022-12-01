@@ -35195,7 +35195,7 @@ GameObject:
   - component: {fileID: 1933367664849667098}
   - component: {fileID: -8517928419408785036}
   m_Layer: 2
-  m_Name: CurrencyDrop
+  m_Name: inGameCurrencyDrop
   m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
