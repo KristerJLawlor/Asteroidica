@@ -105,7 +105,13 @@ public class playerShoot : MonoBehaviour
                 this.GetComponent<CameraLook>().ammoCount--;
                 temp.transform.forward = this.transform.forward *-1;
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 50 + this.GetComponent<CameraLook>().myRig.velocity;
-               
+                if (this.GetComponent<CameraLook>().ammoCount == 0)
+                {
+                    indicater.setActiveWeapon(0);
+                    selectedWeapon = laserPrefab;
+                    ROF = .3f;
+
+                }
 
             }
             canShoot = false;
