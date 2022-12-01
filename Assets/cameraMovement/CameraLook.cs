@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.GameCenter;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CameraLook : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class CameraLook : MonoBehaviour
     float Speed = 5;
     float acceleration = 12f;
     float maxSpeed = 8f;
+    public float currency = 0;
+    public float ammoCount = 0;
+    public int score;
+    public ScoreScript scoreBar;
 
     
     // Start is called before the first frame update
@@ -26,6 +31,7 @@ public class CameraLook : MonoBehaviour
         Cursor.lockState=CursorLockMode.Locked;
         myRig = GetComponent<Rigidbody>();
         StartCoroutine(Wait());
+        score = 0;
     }
     public IEnumerator Wait()
     { 
@@ -88,6 +94,8 @@ public class CameraLook : MonoBehaviour
 
 
         }
+        scoreBar.ChangeScore(score);
+        
     }
     public void onLook(InputAction.CallbackContext l)
     {

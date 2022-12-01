@@ -1,98 +1,278 @@
 fileFormatVersion: 2
 guid: 8dcf6e6722e269d43a79a1c286c3bec7
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Arm_L1
-    100002: Arm_L1 1
-    100004: Arm_R1
-    100006: Arm_R2
-    100008: BodyHelper
-    100010: Bone001
-    100012: Bone003
-    100014: Bone005
-    100016: Bone006
-    100018: Bone007
-    100020: Bone008
-    100022: Bone011
-    100024: Bone012
-    100026: Bone015
-    100028: Bone016
-    100030: Bone017
-    100032: Bone018
-    100034: Bone019
-    100036: Bone022
-    100038: Bone023
-    100040: Bone026
-    100042: Bone027
-    100044: Bone028
-    100046: Bone029
-    100048: Bone030
-    100050: Bug_1
-    100052: //RootNode
-    100054: Head
-    100056: IK Chain001
-    100058: IK Chain002
-    100060: IK Chain003
-    100062: IK Chain004
-    100064: IK Chain005
-    100066: IK Chain006
-    100068: IK Chain007
-    100070: IK Chain008
-    100072: Leg_L1
-    100074: Leg_L2
-    100076: Leg_R1
-    100078: Leg_R2
-    100080: Middle
-    400000: Arm_L1
-    400002: Arm_L1 1
-    400004: Arm_R1
-    400006: Arm_R2
-    400008: BodyHelper
-    400010: Bone001
-    400012: Bone003
-    400014: Bone005
-    400016: Bone006
-    400018: Bone007
-    400020: Bone008
-    400022: Bone011
-    400024: Bone012
-    400026: Bone015
-    400028: Bone016
-    400030: Bone017
-    400032: Bone018
-    400034: Bone019
-    400036: Bone022
-    400038: Bone023
-    400040: Bone026
-    400042: Bone027
-    400044: Bone028
-    400046: Bone029
-    400048: Bone030
-    400050: Bug_1
-    400052: //RootNode
-    400054: Head
-    400056: IK Chain001
-    400058: IK Chain002
-    400060: IK Chain003
-    400062: IK Chain004
-    400064: IK Chain005
-    400066: IK Chain006
-    400068: IK Chain007
-    400070: IK Chain008
-    400072: Leg_L1
-    400074: Leg_L2
-    400076: Leg_R1
-    400078: Leg_R2
-    400080: Middle
-    4300000: Bug_1
-    7400000: Idle
-    7400002: Run
-    7400004: Attack
-    7400006: Dead
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: Bug_1
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_L1
+  - first:
+      1: 100002
+    second: Arm_L1 1
+  - first:
+      1: 100004
+    second: Arm_R1
+  - first:
+      1: 100006
+    second: Arm_R2
+  - first:
+      1: 100008
+    second: BodyHelper
+  - first:
+      1: 100010
+    second: Bone001
+  - first:
+      1: 100012
+    second: Bone003
+  - first:
+      1: 100014
+    second: Bone005
+  - first:
+      1: 100016
+    second: Bone006
+  - first:
+      1: 100018
+    second: Bone007
+  - first:
+      1: 100020
+    second: Bone008
+  - first:
+      1: 100022
+    second: Bone011
+  - first:
+      1: 100024
+    second: Bone012
+  - first:
+      1: 100026
+    second: Bone015
+  - first:
+      1: 100028
+    second: Bone016
+  - first:
+      1: 100030
+    second: Bone017
+  - first:
+      1: 100032
+    second: Bone018
+  - first:
+      1: 100034
+    second: Bone019
+  - first:
+      1: 100036
+    second: Bone022
+  - first:
+      1: 100038
+    second: Bone023
+  - first:
+      1: 100040
+    second: Bone026
+  - first:
+      1: 100042
+    second: Bone027
+  - first:
+      1: 100044
+    second: Bone028
+  - first:
+      1: 100046
+    second: Bone029
+  - first:
+      1: 100048
+    second: Bone030
+  - first:
+      1: 100050
+    second: Bug_1
+  - first:
+      1: 100052
+    second: //RootNode
+  - first:
+      1: 100054
+    second: Head
+  - first:
+      1: 100056
+    second: IK Chain001
+  - first:
+      1: 100058
+    second: IK Chain002
+  - first:
+      1: 100060
+    second: IK Chain003
+  - first:
+      1: 100062
+    second: IK Chain004
+  - first:
+      1: 100064
+    second: IK Chain005
+  - first:
+      1: 100066
+    second: IK Chain006
+  - first:
+      1: 100068
+    second: IK Chain007
+  - first:
+      1: 100070
+    second: IK Chain008
+  - first:
+      1: 100072
+    second: Leg_L1
+  - first:
+      1: 100074
+    second: Leg_L2
+  - first:
+      1: 100076
+    second: Leg_R1
+  - first:
+      1: 100078
+    second: Leg_R2
+  - first:
+      1: 100080
+    second: Middle
+  - first:
+      4: 400000
+    second: Arm_L1
+  - first:
+      4: 400002
+    second: Arm_L1 1
+  - first:
+      4: 400004
+    second: Arm_R1
+  - first:
+      4: 400006
+    second: Arm_R2
+  - first:
+      4: 400008
+    second: BodyHelper
+  - first:
+      4: 400010
+    second: Bone001
+  - first:
+      4: 400012
+    second: Bone003
+  - first:
+      4: 400014
+    second: Bone005
+  - first:
+      4: 400016
+    second: Bone006
+  - first:
+      4: 400018
+    second: Bone007
+  - first:
+      4: 400020
+    second: Bone008
+  - first:
+      4: 400022
+    second: Bone011
+  - first:
+      4: 400024
+    second: Bone012
+  - first:
+      4: 400026
+    second: Bone015
+  - first:
+      4: 400028
+    second: Bone016
+  - first:
+      4: 400030
+    second: Bone017
+  - first:
+      4: 400032
+    second: Bone018
+  - first:
+      4: 400034
+    second: Bone019
+  - first:
+      4: 400036
+    second: Bone022
+  - first:
+      4: 400038
+    second: Bone023
+  - first:
+      4: 400040
+    second: Bone026
+  - first:
+      4: 400042
+    second: Bone027
+  - first:
+      4: 400044
+    second: Bone028
+  - first:
+      4: 400046
+    second: Bone029
+  - first:
+      4: 400048
+    second: Bone030
+  - first:
+      4: 400050
+    second: Bug_1
+  - first:
+      4: 400052
+    second: //RootNode
+  - first:
+      4: 400054
+    second: Head
+  - first:
+      4: 400056
+    second: IK Chain001
+  - first:
+      4: 400058
+    second: IK Chain002
+  - first:
+      4: 400060
+    second: IK Chain003
+  - first:
+      4: 400062
+    second: IK Chain004
+  - first:
+      4: 400064
+    second: IK Chain005
+  - first:
+      4: 400066
+    second: IK Chain006
+  - first:
+      4: 400068
+    second: IK Chain007
+  - first:
+      4: 400070
+    second: IK Chain008
+  - first:
+      4: 400072
+    second: Leg_L1
+  - first:
+      4: 400074
+    second: Leg_L2
+  - first:
+      4: 400076
+    second: Leg_R1
+  - first:
+      4: 400078
+    second: Leg_R2
+  - first:
+      4: 400080
+    second: Middle
+  - first:
+      43: 4300000
+    second: Bug_1
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Run
+  - first:
+      74: 7400004
+    second: Attack
+  - first:
+      74: 7400006
+    second: Dead
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Bug_1
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -100,7 +280,7 @@ ModelImporter:
       name: 07 - Default
     second: {fileID: 2100000, guid: cfb5c84d0d83e56498446cc2737e27e9, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -109,7 +289,8 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: <Root Transform>
+    removeConstantScaleCurves: 0
+    motionNodeName: BodyHelper
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -129,6 +310,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 1
       lastFrame: 31
       wrapMode: 0
@@ -136,7 +318,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 0
+      hasAdditiveReferencePose: 1
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -148,7 +330,32 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: Curve
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
       events: []
       transformMask: []
       maskType: 3
@@ -157,6 +364,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Take 001
+      internalID: 0
       firstFrame: 40
       lastFrame: 60
       wrapMode: 0
@@ -185,6 +393,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Take 001
+      internalID: 0
       firstFrame: 70
       lastFrame: 90
       wrapMode: 0
@@ -213,6 +422,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Dead
       takeName: Take 001
+      internalID: 0
       firstFrame: 100
       lastFrame: 120
       wrapMode: 0
@@ -244,34 +454,47 @@ ModelImporter:
     globalScale: 0.05
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.05
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -281,14 +504,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.05
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0.000000094156974, y: 0.7071068, z: 0.7071068, w: -0.000000094156974}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 1
   userData: 
   assetBundleName: 

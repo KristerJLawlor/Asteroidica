@@ -23,12 +23,16 @@ public class bugMovement : MonoBehaviour
         goal5 = GameObject.Find("Point5").transform.position;
         myNav.destination = goal2;
     }
-
+    public IEnumerator Stall()
+    {
+        yield return new WaitForSeconds(5);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (myNav.remainingDistance == 0)
+        if (myNav.remainingDistance <= 0.1f)
         {
+            StartCoroutine(Stall());
             goal = Random.Range(0, 5);
             if (goal == 0)
             {
