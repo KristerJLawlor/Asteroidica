@@ -10,6 +10,7 @@ public class weaponScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(KMS());
+        TTL = 2;
     }
     public IEnumerator KMS()
     {

@@ -30,7 +30,11 @@ public class BugBossHealth : MonoBehaviour
             }
             else
             {
-                HP--;
+                if (c.gameObject.tag == "Missile")
+                {
+                    HP -= 10;
+                }
+                HP-=2;
             }
         }
 

@@ -13,6 +13,7 @@ public class bugMovement : MonoBehaviour
     Vector3 goal4;
     Vector3 goal5;
     public int goal = 0;
+    
     void Start()
     {
         myNav=this.gameObject.GetComponent<NavMeshAgent>();
@@ -22,47 +23,46 @@ public class bugMovement : MonoBehaviour
         goal4 = GameObject.Find("Point4").transform.position;
         goal5 = GameObject.Find("Point5").transform.position;
         myNav.destination = goal2;
+        
     }
     public IEnumerator Stall()
     {
         yield return new WaitForSeconds(5);
+        myNav.isStopped = false;
+        
     }
     // Update is called once per frame
     void Update()
     {
+        
         if (myNav.remainingDistance <= 0.1f)
         {
-            StartCoroutine(Stall());
+            myNav.isStopped = true;
             goal = Random.Range(0, 5);
             if (goal == 0)
             {
                 myNav.destination = goal1;
-                //myNav.Resume();
-                myNav.isStopped = false;
+                StartCoroutine(Stall());
             }
             if (goal == 1)
             {
                 myNav.destination = goal2;
-                //myNav.Resume();
-                myNav.isStopped = false;
+                StartCoroutine(Stall());
             }
             if (goal == 2)
             {
                 myNav.destination = goal3;
-                //myNav.Resume();
-                myNav.isStopped = false;
+                StartCoroutine(Stall());
             }
             if (goal == 3)
             {
                 myNav.destination = goal4;
-                //myNav.Resume();
-                myNav.isStopped = false;
+                StartCoroutine(Stall());
             }
             if (goal == 4)
             {
                 myNav.destination = goal5;
-                //myNav.Resume();
-                myNav.isStopped = false;
+                StartCoroutine(Stall());
             }
         }
     }

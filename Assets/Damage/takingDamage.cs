@@ -14,15 +14,16 @@ public class takingDamage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "laser")
+        if (collision.gameObject.tag != "laser" || collision.gameObject.tag=="Drop" || collision.gameObject.tag=="Ammo")
         {
             
-            HP--;
+            HP-=2;
         }
         if (collision.gameObject.tag == "Drone")
         {
             collision.GetComponent<DroneMovement>().Explode(collision.GetComponent<DroneMovement>().myRig.position);
             Destroy(collision.gameObject);
+            HP -= 5;
         }
         if (collision.gameObject.tag == "Ammo")
         {
@@ -31,6 +32,7 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag == "Drop")
         {
             this.GetComponent<CameraLook>().currency += 100;
+            GameObject.Destroy(collision.gameObject);
         }
     }
 

@@ -19,10 +19,11 @@ public class CameraLook : MonoBehaviour
     float acceleration = 12f;
     float maxSpeed = 8f;
     public float currency = 0;
-    public float ammoCount = 0;
+    public int ammoCount = 5;
     public int score;
     public ScoreScript scoreBar;
     public InGame_PanelHandler panelmaker;
+    public RocketAmmoCounter ammoCounter;
 
     
     // Start is called before the first frame update
@@ -104,6 +105,7 @@ public class CameraLook : MonoBehaviour
 
         }
         scoreBar.ChangeScore(score);
+        ammoCounter.ChangeResource(ammoCount);
         
     }
     public void onLook(InputAction.CallbackContext l)

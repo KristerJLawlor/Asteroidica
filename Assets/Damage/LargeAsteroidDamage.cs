@@ -8,36 +8,45 @@ public class LargeAsteroidDamage : MonoBehaviour
 {
     public int HP = 3;
     public int MaxHP = 3;
-
-    
-
-    GameObject pickup;
+    public GameObject pickup;
+    public GameObject ammo;
+    public GameObject Cam;
+    public int score;
+    public bool isDead = false;
     void Start()
     {
         
     }
     public void OnTriggerEnter(Collider c)
     {
-        if(HP <= 0)
+
+        if ((HP == 0 || c.gameObject.tag=="Missile") && !isDead)
         {
+            isDead = true;
             StartCoroutine(DestroyMe());
             int pickupSpawn = Random.Range(1, 100);
+            int ammoSpawn = Random.Range(1, 100);
+            score += 100;
+            GameObject.FindObjectOfType<CameraLook>().score += score;
             //Assuning this is a laser
             GetComponent<AsteroidMovement>().Explode(this.transform.position);
-            if (pickupSpawn % 10 == 0)
-            {
-                //GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-            }
+            
         }
-        else
+        else 
         {
             HP--;
         }
-
-        
     }
     public IEnumerator DestroyMe()
     {
+        //if (pickupSpawn % 4 == 0)
+        //{
+        GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        //}
+        //else if (ammoSpawn % 5 == 0)
+        //{
+        //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        //}
         GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.up*3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position-this.transform.right * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.right * 3);
