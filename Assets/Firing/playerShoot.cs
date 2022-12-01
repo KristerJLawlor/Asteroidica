@@ -14,6 +14,7 @@ public class playerShoot : MonoBehaviour
     public bool lastFire=false;
     public bool canShoot=false;
     public WeaponIndicater indicater;
+    public int mMissile;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,15 +49,17 @@ public class playerShoot : MonoBehaviour
             {
                 indicater.setActiveWeapon(1);
                 selectedWeapon = scattershotPrefab;
+                scattershotPrefab.GetComponent<weaponScript>().TTL = .5f;
             }
             else if (selectedWeapon == scattershotPrefab)
             {
                 indicater.setActiveWeapon(2);
                 selectedWeapon = laserCannonPrefab;
+                laserCannonPrefab.GetComponent<weaponScript>().TTL = 1;
                 ROF = .001f;
                 
             }
-            else if (selectedWeapon == laserCannonPrefab)
+            else if (selectedWeapon == laserCannonPrefab && this.GetComponent<CameraLook>().ammoCount>0)
             {
                 indicater.setActiveWeapon(3);
                 selectedWeapon = missilePrefab;
@@ -99,11 +102,15 @@ public class playerShoot : MonoBehaviour
             }
             if (selectedWeapon == missilePrefab)
             {
+                this.GetComponent<CameraLook>().ammoCount--;
                 temp.transform.forward = this.transform.forward *-1;
-                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 20 + this.GetComponent<CameraLook>().myRig.velocity;
+                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 50 + this.GetComponent<CameraLook>().myRig.velocity;
+               
+
             }
             canShoot = false;
             StartCoroutine(Reload());
         }
     }
+    
 }

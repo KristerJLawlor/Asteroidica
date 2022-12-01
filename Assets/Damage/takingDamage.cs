@@ -17,12 +17,13 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag != "laser")
         {
             
-            HP--;
+            HP-=2;
         }
         if (collision.gameObject.tag == "Drone")
         {
             collision.GetComponent<DroneMovement>().Explode(collision.GetComponent<DroneMovement>().myRig.position);
             Destroy(collision.gameObject);
+            HP -= 5;
         }
         if (collision.gameObject.tag == "Ammo")
         {

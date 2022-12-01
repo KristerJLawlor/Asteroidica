@@ -240,7 +240,6 @@ GameObject:
   - component: {fileID: 5042085634434531589}
   - component: {fileID: 5042085634432282559}
   - component: {fileID: 6580060855001016219}
-  - component: {fileID: 7053870942582384910}
   - component: {fileID: 4467836288889200991}
   - component: {fileID: 7768845203352416233}
   m_Layer: 0
@@ -312,22 +311,6 @@ MonoBehaviour:
   SpeedVar: 8
   AsteroidSpeed: {x: 0, y: 0, z: 0}
   Explosion: {fileID: 7598582955302121708, guid: 24c4ac4e78cfbae4fa85bffe716d54be, type: 3}
---- !u!114 &7053870942582384910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5042085634437792145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d1a89a8e37e02459b62eb1a0058c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
-  ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
-  Cam: {fileID: 7476970275355913809, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
-  score: 0
 --- !u!135 &4467836288889200991
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -355,6 +338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1000
   MaxHP: 2
+  pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
+  ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
+  Cam: {fileID: 7476970275355913809, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+  score: 0
 --- !u!1 &5042085634437796911
 GameObject:
   m_ObjectHideFlags: 0

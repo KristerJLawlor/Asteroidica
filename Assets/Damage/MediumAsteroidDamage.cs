@@ -8,41 +8,47 @@ public class MediumAsteroidDamage : MonoBehaviour
 {
     public int HP = 2;
     public int MaxHP = 2;
-
-    
-
-    GameObject pickup;
+    public GameObject pickup;
+    public GameObject ammo;
+    public GameObject Cam;
+    public int score;
     void Start()
     {
-        
+
     }
     public void OnTriggerEnter(Collider c)
     {
-        if(HP <= 0)
+
+        if (HP <= 0 || c.gameObject.tag=="Missile")
         {
             StartCoroutine(DestroyMe());
             int pickupSpawn = Random.Range(1, 100);
+            int ammoSpawn = Random.Range(1, 100);
+            score += 100;
+            Cam.GetComponent<CameraLook>().score = score;
             //Assuning this is a laser
             GetComponent<AsteroidMovement>().Explode(this.transform.position);
-            if (pickupSpawn % 10 == 0)
-            {
-                //GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-            }
+            //if (pickupSpawn % 4 == 0)
+            //{
+            GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+            //}
+            //else if (ammoSpawn % 5 == 0)
+            //{
+            //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+            //}
         }
         else
         {
             HP--;
         }
-
-        
     }
     public IEnumerator DestroyMe()
     {
-        GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.up*3);
-        GetComponent<AsteroidMovement>().Explode(this.transform.position-this.transform.right * 3);
-        GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.right * 3);
+        GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.up * 3);
+        GetComponent<AsteroidMovement>().Explode(this.transform.position - this.transform.right * 3);
+        GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.right * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position);
-        GetComponent<AsteroidMovement>().Explode(this.transform.position-this.transform.up * 3);
+        GetComponent<AsteroidMovement>().Explode(this.transform.position - this.transform.up * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position - this.transform.forward * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.forward * 3);
         yield return new WaitForSeconds(.75f);
@@ -51,13 +57,13 @@ public class MediumAsteroidDamage : MonoBehaviour
 
     public void OnDestroy()
     {
-       
+
     }
-        
+
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
