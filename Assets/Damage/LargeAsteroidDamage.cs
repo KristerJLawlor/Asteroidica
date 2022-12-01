@@ -12,6 +12,7 @@ public class LargeAsteroidDamage : MonoBehaviour
     public GameObject ammo;
     public GameObject Cam;
     public int score;
+    public bool isDead = false;
     void Start()
     {
         
@@ -19,23 +20,17 @@ public class LargeAsteroidDamage : MonoBehaviour
     public void OnTriggerEnter(Collider c)
     {
 
-        if (HP <= 0 || c.gameObject.tag=="Missile")
+        if ((HP == 0 || c.gameObject.tag=="Missile") && !isDead)
         {
+            isDead = true;
             StartCoroutine(DestroyMe());
             int pickupSpawn = Random.Range(1, 100);
             int ammoSpawn = Random.Range(1, 100);
             score += 100;
-            Cam.GetComponent<CameraLook>().score = score;
+            GameObject.FindObjectOfType<CameraLook>().score += score;
             //Assuning this is a laser
             GetComponent<AsteroidMovement>().Explode(this.transform.position);
-            //if (pickupSpawn % 4 == 0)
-            //{
-            GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-            //}
-            //else if (ammoSpawn % 5 == 0)
-            //{
-            //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-            //}
+            
         }
         else 
         {
@@ -44,6 +39,14 @@ public class LargeAsteroidDamage : MonoBehaviour
     }
     public IEnumerator DestroyMe()
     {
+        //if (pickupSpawn % 4 == 0)
+        //{
+        GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        //}
+        //else if (ammoSpawn % 5 == 0)
+        //{
+        //    GameObject.Instantiate(ammo, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
+        //}
         GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.up*3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position-this.transform.right * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position+this.transform.right * 3);

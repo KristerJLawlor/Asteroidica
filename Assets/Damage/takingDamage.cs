@@ -14,7 +14,7 @@ public class takingDamage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "laser")
+        if (collision.gameObject.tag != "laser" || collision.gameObject.tag=="Drop" || collision.gameObject.tag=="Ammo")
         {
             
             HP-=2;
@@ -32,6 +32,7 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag == "Drop")
         {
             this.GetComponent<CameraLook>().currency += 100;
+            GameObject.Destroy(collision.gameObject);
         }
     }
 
