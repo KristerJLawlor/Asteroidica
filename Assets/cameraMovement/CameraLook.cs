@@ -58,6 +58,7 @@ public class CameraLook : MonoBehaviour
     {
         if ( p.phase == InputActionPhase.Performed)
         {
+            Cursor.lockState = CursorLockMode.None;
             panelmaker.setGamePanel(1);
         }
     }
