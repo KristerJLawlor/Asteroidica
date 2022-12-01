@@ -22,6 +22,7 @@ public class CameraLook : MonoBehaviour
     public float ammoCount = 0;
     public int score;
     public ScoreScript scoreBar;
+    public InGame_PanelHandler panelmaker;
 
     
     // Start is called before the first frame update
@@ -50,6 +51,13 @@ public class CameraLook : MonoBehaviour
         {
             lastInput = Vector3.zero;
 
+        }
+    }
+    public void Pause(InputAction.CallbackContext p)
+    {
+        if ( p.phase == InputActionPhase.Performed)
+        {
+            panelmaker.setGamePanel(1);
         }
     }
     // Update is called once per frame

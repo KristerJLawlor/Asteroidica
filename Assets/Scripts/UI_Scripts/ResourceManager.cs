@@ -14,7 +14,7 @@ public class ResourceManager : MonoBehaviour
         resourceCounter.ChangeResource(Resources);
         for (int i = 0; i < shopButtons.Length; i++)
         {
-            if (PlayerPrefs.GetInt("ShopSetDefault", 0) == i+1)
+            if (PlayerPrefs.GetInt("ShopSetDefault", 0) < i+1)
             {
                 print("Sold");
                 shopButtons[i].interactable = false;
