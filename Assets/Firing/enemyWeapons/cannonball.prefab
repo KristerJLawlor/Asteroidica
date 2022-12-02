@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3839022712555561881}
   - component: {fileID: 4465190728129655223}
   - component: {fileID: 4685795157743653819}
+  - component: {fileID: 1790108882705549651}
   m_Layer: 0
   m_Name: cannonball
   m_TagString: EnemyLaser
@@ -114,3 +115,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.01
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1790108882705549651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942051580892192243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2cf442e9a79b94e8cfac1f4f31fc8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 2
+  MaxHP: 2
+  pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
+  ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
+  score: 0
+  isDead: 0
