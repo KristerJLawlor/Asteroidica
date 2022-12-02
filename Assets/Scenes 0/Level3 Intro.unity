@@ -25424,6 +25424,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f733d6b909709c4fa85e07427853c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &682102662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6467570863972729619, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
+  m_PrefabInstance: {fileID: 682102658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8465584ec305312448e4d18b4b66f0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &682102663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6467570864754745366, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
+  m_PrefabInstance: {fileID: 682102658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc08092c26617e4199e8050d56ce58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &682204548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27704,6 +27726,10 @@ PrefabInstance:
       propertyPath: ammoCounter
       value: 
       objectReference: {fileID: 682102661}
+    - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+      propertyPath: resourceCounter
+      value: 
+      objectReference: {fileID: 682102662}
     - target: {fileID: 7476970275355913807, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -27720,6 +27746,10 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 682102659}
+    - target: {fileID: 7476970275355913814, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+      propertyPath: lifeCounter
+      value: 
+      objectReference: {fileID: 682102663}
     - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: indicater
       value: 
