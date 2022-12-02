@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/UI_Test_Scenes/Tutorial.unity
     guid: d11af3eb3e5a38e408d3282f76410331
   - enabled: 1
+    path: Assets/Scenes 0/Level1 Intro.unity
+    guid: 66ddb63f09c8777439bc2f926d100024
+  - enabled: 1
+    path: Assets/Scenes 0/Level1 Boss.unity
+    guid: 985ab483f453e98448f83eee4130023b
+  - enabled: 1
     path: Assets/Scenes 0/Level2 Intro.unity
     guid: e3ac4d25ba983c3448b4dac5271a1f89
   m_configObjects: {}
