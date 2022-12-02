@@ -1359,6 +1359,7 @@ GameObject:
   - component: {fileID: 3418095833808838408}
   - component: {fileID: 3418095833808838409}
   - component: {fileID: 3418095833808838410}
+  - component: {fileID: 645170337}
   m_Layer: 5
   m_Name: RocketU3
   m_TagString: Untagged
@@ -1468,7 +1469,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095833808838409}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 645170337}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &645170337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095833808838404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095833808838410}
+  isPurchased: 0
 --- !u!1 &3418095833847982767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1780,7 @@ GameObject:
   - component: {fileID: 3418095833876691692}
   - component: {fileID: 3418095833876691693}
   - component: {fileID: 3418095833876691694}
+  - component: {fileID: 2048061952}
   m_Layer: 5
   m_Name: LaserU3
   m_TagString: Untagged
@@ -1861,7 +1890,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095833876691693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2048061952}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2048061952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095833876691688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095833876691694}
+  isPurchased: 0
 --- !u!1 &3418095833884951569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,7 +2706,6 @@ MonoBehaviour:
   price: 0
   thisButton: {fileID: 3418095834014631494}
   isPurchased: 0
-  ShopUpgradeIndication: 1
 --- !u!1 &3418095834081328049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2718,7 @@ GameObject:
   - component: {fileID: 3418095834081328053}
   - component: {fileID: 3418095834081328054}
   - component: {fileID: 3418095834081328055}
+  - component: {fileID: 114291122}
   m_Layer: 5
   m_Name: ScatterU1
   m_TagString: Untagged
@@ -2772,7 +2828,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095834081328054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114291122}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &114291122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095834081328049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095834081328055}
+  isPurchased: 0
 --- !u!1 &3418095834116815439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,7 +3176,6 @@ MonoBehaviour:
   price: 0
   thisButton: {fileID: 3418095834208213262}
   isPurchased: 0
-  ShopUpgradeIndication: 0
 --- !u!1 &3418095834215238345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3458,7 @@ GameObject:
   - component: {fileID: 3418095834246843975}
   - component: {fileID: 3418095834246843968}
   - component: {fileID: 3418095834246843969}
+  - component: {fileID: 117775642}
   m_Layer: 5
   m_Name: LaserU1
   m_TagString: Untagged
@@ -3485,7 +3568,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095834246843968}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 117775642}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &117775642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095834246843971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095834246843969}
+  isPurchased: 0
 --- !u!1 &3418095834250423228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +5007,7 @@ GameObject:
   - component: {fileID: 3418095834714246731}
   - component: {fileID: 3418095834714246724}
   - component: {fileID: 3418095834714246725}
+  - component: {fileID: 810044268}
   m_Layer: 5
   m_Name: RocketU1
   m_TagString: Untagged
@@ -5006,7 +5117,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095834714246724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 810044268}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &810044268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095834714246727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095834714246725}
+  isPurchased: 0
 --- !u!1 &3418095834719952424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5400,7 @@ GameObject:
   - component: {fileID: 3418095834786558866}
   - component: {fileID: 3418095834786558867}
   - component: {fileID: 3418095834786558860}
+  - component: {fileID: 994842476}
   m_Layer: 5
   m_Name: defaultU3
   m_TagString: Untagged
@@ -5371,7 +5510,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095834786558867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994842476}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &994842476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095834786558862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095834786558860}
+  isPurchased: 0
 --- !u!1 &3418095834791826768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6332,6 +6498,7 @@ GameObject:
   - component: {fileID: 3418095835058453013}
   - component: {fileID: 3418095835058453014}
   - component: {fileID: 3418095835058453015}
+  - component: {fileID: 382893559}
   m_Layer: 5
   m_Name: ScatterU2
   m_TagString: Untagged
@@ -6441,7 +6608,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095835058453014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 382893559}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &382893559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095835058453009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095835058453015}
+  isPurchased: 0
 --- !u!1 &3418095835125441327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,6 +6782,7 @@ GameObject:
   - component: {fileID: 3418095835182227930}
   - component: {fileID: 3418095835182227931}
   - component: {fileID: 3418095835182227924}
+  - component: {fileID: 1766244369}
   m_Layer: 5
   m_Name: LaserU2
   m_TagString: Untagged
@@ -6697,7 +6892,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095835182227931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1766244369}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1766244369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095835182227926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095835182227924}
+  isPurchased: 0
 --- !u!1 &3418095835207315196
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,6 +7489,7 @@ GameObject:
   - component: {fileID: 3418095835514337457}
   - component: {fileID: 3418095835514337458}
   - component: {fileID: 3418095835514337459}
+  - component: {fileID: 1864973537}
   m_Layer: 5
   m_Name: RocketU2
   m_TagString: Untagged
@@ -7376,7 +7599,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095835514337458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1864973537}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1864973537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095835514337453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095835514337459}
+  isPurchased: 0
 --- !u!1 &3418095835528306236
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,6 +7639,7 @@ GameObject:
   - component: {fileID: 3418095835528306240}
   - component: {fileID: 3418095835528306241}
   - component: {fileID: 3418095835528306242}
+  - component: {fileID: 2122711258}
   m_Layer: 5
   m_Name: ScatterU3
   m_TagString: Untagged
@@ -7498,7 +7749,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3418095835528306241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2122711258}
+        m_TargetAssemblyTypeName: ShoppingScript, Assembly-CSharp
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2122711258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418095835528306236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60882ee9c3428244ac5a693f37273a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  thisButton: {fileID: 3418095835528306242}
+  isPurchased: 0
 --- !u!1 &3418095835570478887
 GameObject:
   m_ObjectHideFlags: 0
