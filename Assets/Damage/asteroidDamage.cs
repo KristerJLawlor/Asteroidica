@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class asteroidDamage : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class asteroidDamage : MonoBehaviour
     // Start is called before the first frame update
     public GameObject pickup;
     public GameObject ammo;
-    
+    public GameObject Portal;
+
+    public string scenename;
+
+    public int scorethreshold = 2000;
     public int score;
     public bool isDead = false;
+    
     void Start()
     {
-        
+        scenename = SceneManager.GetActiveScene().name;
     }
     public void OnTriggerEnter(Collider c)
     {
@@ -61,6 +67,12 @@ public class asteroidDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Spawn portal to next level if score is above threshold
+        if((scenename == "Level1 Intro" ||
+            scenename == "Level2 Intro" || 
+            scenename == "Level3 Intro") && score > scorethreshold  )
+        {
+            Instantiate(Portal, Vector3.zero, Quaternion.identity);
+        }
     }
 }

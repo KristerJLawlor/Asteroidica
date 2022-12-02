@@ -81,7 +81,8 @@ public class PyramidBossHealth : MonoBehaviour
     }
 
     
-    /*public IEnumerator SpawnPortal()
+    /*
+     public IEnumerator SpawnPortal()
     {
         Debug.Log("made it to SpawnPortal");
         //yield return new WaitForSeconds(2f);

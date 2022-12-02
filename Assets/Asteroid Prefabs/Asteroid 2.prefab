@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 6580060855001016219}
   - component: {fileID: 4467836288889200991}
   - component: {fileID: 7768845203352416233}
+  - component: {fileID: -6321747797373392974}
   m_Layer: 0
   m_Name: Asteroid 2
   m_TagString: Enemy
@@ -340,6 +341,25 @@ MonoBehaviour:
   MaxHP: 2
   pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
   ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
+  score: 0
+  isDead: 0
+--- !u!114 &-6321747797373392974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5042085634437792145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d1a89a8e37e02459b62eb1a0058c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
+  ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
+  scenename: 
+  scorethreshold: 2000
   score: 0
   isDead: 0
 --- !u!1 &5042085634437796911
