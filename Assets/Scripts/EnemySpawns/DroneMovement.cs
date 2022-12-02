@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DroneMovement : MonoBehaviour
 {
     public Rigidbody myRig;
     public Rigidbody playerRig;
     public GameObject DroneObject;
+   
 
     public Vector3 PlayerLocation;
     public Vector3 DroneLocation;
@@ -72,8 +74,10 @@ public class DroneMovement : MonoBehaviour
         }
             if (HP <= 0)
         {
+            GameObject.FindObjectOfType<CameraLook>().score += 100;
             Explode(myRig.position);
             Destroy(this.gameObject);
+            
         }
         
         
