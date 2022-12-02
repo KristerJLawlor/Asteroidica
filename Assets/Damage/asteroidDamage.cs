@@ -13,7 +13,7 @@ public class asteroidDamage : MonoBehaviour
 
     public string scenename;
 
-    public int scorethreshold = 2000;
+    public int scorethreshold = 2500;
     public int score;
     public bool isDead = false;
     
@@ -23,7 +23,7 @@ public class asteroidDamage : MonoBehaviour
     }
     public void OnTriggerEnter(Collider c)
     {
-        if (!isDead)
+        if (!isDead && c.gameObject.tag != "Portal")
         {
             isDead = true;
             StartCoroutine(DestroyMe());

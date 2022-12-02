@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class CameraLook : MonoBehaviour
 {
@@ -25,7 +26,12 @@ public class CameraLook : MonoBehaviour
     public InGame_PanelHandler panelmaker;
     public RocketAmmoCounter ammoCounter;
 
-    
+    public string scenename;
+    public bool isIntroLevel = false;
+    public int scorethreshold = 2500;
+    public GameObject Portal;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +40,14 @@ public class CameraLook : MonoBehaviour
         myRig = GetComponent<Rigidbody>();
         StartCoroutine(Wait());
         score = 0;
+
+        scenename = SceneManager.GetActiveScene().name;
+        if (scenename == "Level1 Intro" ||
+            scenename == "Level2 Intro" ||
+            scenename == "Level3 Intro")
+        {
+            isIntroLevel = true;
+        }
     }
     public IEnumerator Wait()
     { 
@@ -106,7 +120,14 @@ public class CameraLook : MonoBehaviour
         }
         scoreBar.ChangeScore(score);
         ammoCounter.ChangeResource(ammoCount);
-        
+
+        /////////////////////////////////////////////////////////////////
+        //Spawn portal to next level if score is above threshold
+        if (isIntroLevel && score > scorethreshold)
+        {
+            Instantiate(Portal, Vector3.zero, Quaternion.identity);
+        }
+
     }
     public void onLook(InputAction.CallbackContext l)
     {

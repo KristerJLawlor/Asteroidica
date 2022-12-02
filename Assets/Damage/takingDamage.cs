@@ -14,7 +14,10 @@ public class takingDamage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "laser" && collision.gameObject.tag != "Drop" && collision.gameObject.tag != "Ammo")
+        if (collision.gameObject.tag != "laser" && 
+            collision.gameObject.tag != "Drop" && 
+            collision.gameObject.tag != "Ammo" &&
+            collision.gameObject.tag != "Portal")
         {
             
             HP-=2;
@@ -33,6 +36,10 @@ public class takingDamage : MonoBehaviour
         {
             this.GetComponent<CameraLook>().currency += 100;
             GameObject.Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Portal")
+        {
+            //DEFINE THE CHARACTER MOVING TO THE NEXT STAGE OR HOME MAP
         }
     }
 
