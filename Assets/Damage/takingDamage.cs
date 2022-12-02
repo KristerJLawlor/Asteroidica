@@ -39,6 +39,7 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag == "Ammo")
         {
             this.GetComponent<CameraLook>().ammoCount += 3;
+            GameObject.Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Drop")
         {

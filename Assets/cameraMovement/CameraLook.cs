@@ -28,8 +28,9 @@ public class CameraLook : MonoBehaviour
 
     public string scenename;
     public bool isIntroLevel = false;
-    public int scorethreshold = 2500;
+    public int scorethreshold = 5000;
     public GameObject Portal;
+    bool portalCanSpawn = true;
 
 
     // Start is called before the first frame update
@@ -123,8 +124,9 @@ public class CameraLook : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////
         //Spawn portal to next level if score is above threshold
-        if (isIntroLevel && score > scorethreshold)
+        if (isIntroLevel && score > scorethreshold && portalCanSpawn)
         {
+            portalCanSpawn = false;
             Instantiate(Portal, Vector3.zero, Quaternion.identity);
         }
 

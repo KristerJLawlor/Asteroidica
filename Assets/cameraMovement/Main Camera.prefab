@@ -106,6 +106,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRig: {fileID: 0}
   canLook: 0
+  currency: 0
+  ammoCount: 5
+  score: 0
+  scoreBar: {fileID: 0}
+  panelmaker: {fileID: 0}
+  ammoCounter: {fileID: 0}
+  scenename: 
+  isIntroLevel: 0
+  scorethreshold: 5000
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
 --- !u!114 &7476970275355913813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +245,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2d5c7b8f-c0d9-4628-a242-33f5cedecc54
     m_ActionName: Player/weaponSwap[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14697668-c1e4-40e7-ab13-5866a87f4618
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -276,6 +290,8 @@ MonoBehaviour:
   ROF: 0.3
   lastFire: 0
   canShoot: 0
+  indicater: {fileID: 0}
+  mMissile: 0
 --- !u!114 &7476970275355913814
 MonoBehaviour:
   m_ObjectHideFlags: 0
