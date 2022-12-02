@@ -16,21 +16,24 @@ public class CameraLook : MonoBehaviour
     float yawSpeed = 0;
     public bool canLook=false;
     Vector3 lastInput;
-    float Speed = 5;
+    float Speed = 12;
     float acceleration = 12f;
-    float maxSpeed = 8f;
-    public float currency = 0;
+    float maxSpeed = 15f;
+    public int currency = 0;
     public int ammoCount = 5;
     public int score;
+    int scoreChecker;
     public ScoreScript scoreBar;
     public InGame_PanelHandler panelmaker;
     public RocketAmmoCounter ammoCounter;
+    public ResourcesScript resourceCounter;
 
     public string scenename;
     public bool isIntroLevel = false;
     public int scorethreshold = 5000;
     public GameObject Portal;
     bool portalCanSpawn = true;
+    bool canIncrease = true;
 
 
     // Start is called before the first frame update
@@ -121,6 +124,7 @@ public class CameraLook : MonoBehaviour
         }
         scoreBar.ChangeScore(score);
         ammoCounter.ChangeResource(ammoCount);
+        resourceCounter.ChangeResource(currency);
 
         /////////////////////////////////////////////////////////////////
         //Spawn portal to next level if score is above threshold
@@ -129,8 +133,18 @@ public class CameraLook : MonoBehaviour
             portalCanSpawn = false;
             Instantiate(Portal, Vector3.zero, Quaternion.identity);
         }
-
+        if (score % 3000 == 0 && canIncrease && score!=0)
+        {
+            this.GetComponent<takingDamage>().lifeCount++;
+            canIncrease = false;
+            scoreChecker = score;
+        }
+        if (scoreChecker != score)
+        {
+            canIncrease = true;
+        }
     }
+    
     public void onLook(InputAction.CallbackContext l)
     {
         //Vector2 input = new Vector2();

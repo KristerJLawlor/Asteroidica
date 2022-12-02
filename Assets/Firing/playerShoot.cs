@@ -13,8 +13,17 @@ public class playerShoot : MonoBehaviour
     public float ROF = .3f;
     public bool lastFire=false;
     public bool canShoot=false;
+    public bool canReplay = false;
     public WeaponIndicater indicater;
     public int mMissile;
+
+
+    //audio    
+    public AudioSource defaultlaseraudio;    
+    public AudioSource scattershotaudio;    
+    public AudioSource lasercannonaudio;
+    public AudioSource missileaudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +36,23 @@ public class playerShoot : MonoBehaviour
         canShoot = true;
         mMissile = 2;
     }
+
+    public IEnumerator AudioWait()
+    {
+        //play audio
+        yield return new WaitForSeconds(2f);
+        lasercannonaudio.Play();
+        yield return new WaitForSeconds(2f);
+        
+        canReplay = true;
+        
+    }
     public void Attack(InputAction.CallbackContext c)
     {
         if (c.phase == InputActionPhase.Started)
         {
             lastFire = true;
-            if (lastFire)
+            if (lastFire && selectedWeapon==laserCannonPrefab)
             {
                 this.GetComponent<CameraLook>().canLook = false;
             }
@@ -87,6 +107,10 @@ public class playerShoot : MonoBehaviour
             //temp.GetComponent<Rigidbody>().rotation = Quaternion.Euler(0,90,90);
             temp.transform.up = this.transform.forward;
             temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 32 + this.GetComponent<CameraLook>().myRig.velocity;
+
+            //play audio
+            defaultlaseraudio.Play();
+
             if (selectedWeapon==scattershotPrefab)
             {
                 for (int i = 0; i < 4; i++) { 
@@ -94,7 +118,11 @@ public class playerShoot : MonoBehaviour
                 //temp.GetComponent<Rigidbody>().rotation = Quaternion.Euler(0,90,90);
                 temp.transform.up = this.transform.forward;
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 32 + this.GetComponent<CameraLook>().myRig.velocity + this.transform.right * Random.Range(-1.0f, 1.0f) + this.transform.up * Random.Range(-1.0f, 1.0f);
-            }
+
+                        //play audio
+                        scattershotaudio.Play();
+                }
+
             }
             if (selectedWeapon == laserCannonPrefab)
             {
@@ -102,6 +130,20 @@ public class playerShoot : MonoBehaviour
                 //USE THIS TO MOVE LAZER OFF CAMERA FACE
                 temp.GetComponent<Rigidbody>().transform.position = new Vector3(temp.GetComponent<Rigidbody>().transform.position.x, temp.GetComponent<Rigidbody>().transform.position.y -1f, temp.GetComponent<Rigidbody>().transform.position.z);
                 //USE THIS TO MOVE LAZER OFF CAMERA FACE
+
+
+                if (canReplay == true)
+                {
+                    //play audio
+                    //lasercannonaudio.Play();
+                    StartCoroutine(AudioWait());
+                    
+                }
+                
+                canReplay = false;
+                
+
+                
             }
             if (selectedWeapon == missilePrefab)
             {
@@ -124,6 +166,8 @@ public class playerShoot : MonoBehaviour
                     ROF = .3f;
 
                 }
+                //play audio
+                missileaudio.Play();
 
             }
             canShoot = false;
