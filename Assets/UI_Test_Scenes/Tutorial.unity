@@ -531,7 +531,6 @@ MonoBehaviour:
   beenUsed: 0
   p1: {fileID: 1781457938}
   unlocker: 2
-  MMC: {fileID: 0}
 --- !u!4 &1781457940
 Transform:
   m_ObjectHideFlags: 0
@@ -557,6 +556,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1781457940}
     m_Modifications:
+    - target: {fileID: -7856599803007323514, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
+      propertyPath: unlocker
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 525237821526347656, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_Pivot.x
       value: 0
