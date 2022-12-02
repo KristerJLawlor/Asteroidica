@@ -52,10 +52,14 @@ public class takingDamage : MonoBehaviour
         {
             GoToNext.GoToNextScene();
         }
-        if (HP <= 0)
+        if (HP <= 0 && lifeCount > 0)
         {
             lifeCount--;
             HP = maxHP;
+        }
+        else
+        { 
+            //Back to level select
         }
     }
 
