@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 1302234009695260280}
   - component: {fileID: 5094013800805845005}
   - component: {fileID: -2569819519908117990}
+  - component: {fileID: -4988800842252601570}
   m_Layer: 0
   m_Name: Asteroid 3
   m_TagString: Enemy
@@ -362,6 +363,25 @@ MonoBehaviour:
   pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
   ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
   Cam: {fileID: 7476970275355913809, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+  score: 0
+  isDead: 0
+--- !u!114 &-4988800842252601570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341807963325248146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d1a89a8e37e02459b62eb1a0058c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
+  ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
+  scenename: 
+  scorethreshold: 2000
   score: 0
   isDead: 0
 --- !u!1 &6341807963325265992
