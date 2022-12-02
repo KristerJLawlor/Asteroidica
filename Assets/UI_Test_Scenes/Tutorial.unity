@@ -542,11 +542,9 @@ Transform:
   m_LocalPosition: {x: 550.6869, y: 247.97525, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6467570864387931867}
-  - {fileID: 525237823271743739}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &525237823271743738
 PrefabInstance:
@@ -554,12 +552,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 1781457940}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7856599803007323514, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
-      propertyPath: unlocker
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 525237821526347656, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -570,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 525237821526347656, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 525237821526347656, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_AnchorMax.x
@@ -648,22 +642,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePanelMaker
       objectReference: {fileID: 0}
-    - target: {fileID: 525237822714717410, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1781457939}
-    - target: {fileID: 525237822768474197, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1781457939}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
---- !u!224 &525237823271743739 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 525237821526347656, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
-  m_PrefabInstance: {fileID: 525237823271743738}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &525237823271743740 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 41453669400368345, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
@@ -681,7 +662,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 1781457940}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6467570864196331361, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
       propertyPath: m_Name
@@ -697,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467570864196331365, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6467570864196331365, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -806,11 +787,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
---- !u!224 &6467570864387931867 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6467570864196331365, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
-  m_PrefabInstance: {fileID: 6467570864387931866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6467570864387931868 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6467570865466806857, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
