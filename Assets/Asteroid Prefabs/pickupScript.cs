@@ -9,12 +9,17 @@ public class pickupScript : MonoBehaviour
 
     void Start()
     {
-     FBN=new Vector3(this.transform.position.x, 6, this.transform.position.z);     
+     FBN=new Vector3(this.transform.position.x, 6, this.transform.position.z); 
+     StartCoroutine(KYS());
     }
-
+    public IEnumerator KYS()
+    {
+        yield return new WaitForSeconds(15);
+        GameObject.Destroy(this.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = Vector3.Lerp(this.transform.position, FBN, .01f);
+        this.transform.position = Vector3.Lerp(this.transform.position, FBN, .05f);
     }
 }

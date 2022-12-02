@@ -26,10 +26,7 @@ public class BugBossHealth : MonoBehaviour
                 int pickupSpawn = Random.Range(1, 100);
                 //Assuning this is a laser
                 Explode(this.transform.position);
-                if (pickupSpawn % 10 == 0)
-                {
-                    //GameObject.Instantiate(pickup, this.GetComponent<AsteroidMovement>().AsteroidRig.position, this.transform.rotation);
-                }
+                
             }
             else
             {

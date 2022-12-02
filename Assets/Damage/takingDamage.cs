@@ -7,6 +7,7 @@ public class takingDamage : MonoBehaviour
     public int HP = 20;
     public int maxHP = 20;
     public HealthBar healthbar;
+    public SceneChanger GoToNext;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag == "Ammo")
         {
             this.GetComponent<CameraLook>().ammoCount += 3;
+            GameObject.Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Drop")
         {
@@ -46,7 +48,7 @@ public class takingDamage : MonoBehaviour
         }
         if (collision.gameObject.tag == "Portal")
         {
-            //DEFINE THE CHARACTER MOVING TO THE NEXT STAGE OR HOME MAP
+            GoToNext.GoToNextScene();
         }
     }
 

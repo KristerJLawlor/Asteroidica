@@ -19,18 +19,20 @@ public class playerShoot : MonoBehaviour
     void Start()
     {
         selectedWeapon = laserPrefab;
+        mMissile = 2;
     }
     public IEnumerator Reload()
     {
         yield return new WaitForSeconds(ROF);
         canShoot = true;
+        mMissile = 2;
     }
     public void Attack(InputAction.CallbackContext c)
     {
         if (c.phase == InputActionPhase.Started)
         {
             lastFire = true;
-            if (lastFire && selectedWeapon == laserCannonPrefab)
+            if (lastFire)
             {
                 this.GetComponent<CameraLook>().canLook = false;
             }
@@ -105,7 +107,16 @@ public class playerShoot : MonoBehaviour
             {
                 this.GetComponent<CameraLook>().ammoCount--;
                 temp.transform.forward = this.transform.forward *-1;
-                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 50 + this.GetComponent<CameraLook>().myRig.velocity;
+                temp.GetComponent<Rigidbody>().velocity = this.transform.forward * mMissile + this.GetComponent<CameraLook>().myRig.velocity;
+                StartCoroutine(missileIncrease());
+                 IEnumerator missileIncrease()
+                {
+                    yield return new WaitForSeconds(.5f);
+                    mMissile = 50;
+                    temp.GetComponent<Rigidbody>().velocity = this.transform.forward * mMissile + this.GetComponent<CameraLook>().myRig.velocity;
+
+                }
+
                 if (this.GetComponent<CameraLook>().ammoCount == 0)
                 {
                     indicater.setActiveWeapon(0);
@@ -120,4 +131,5 @@ public class playerShoot : MonoBehaviour
         }
     }
     
+
 }
