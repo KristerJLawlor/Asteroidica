@@ -11,6 +11,7 @@ TagManager:
   - Drop
   - Ammo
   - Portal
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX
