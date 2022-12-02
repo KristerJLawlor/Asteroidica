@@ -22,6 +22,7 @@ public class CameraLook : MonoBehaviour
     public int currency = 0;
     public int ammoCount = 5;
     public int score;
+    int scoreChecker;
     public ScoreScript scoreBar;
     public InGame_PanelHandler panelmaker;
     public RocketAmmoCounter ammoCounter;
@@ -32,6 +33,7 @@ public class CameraLook : MonoBehaviour
     public int scorethreshold = 5000;
     public GameObject Portal;
     bool portalCanSpawn = true;
+    bool canIncrease = true;
 
 
     // Start is called before the first frame update
@@ -49,13 +51,6 @@ public class CameraLook : MonoBehaviour
             scenename == "Level3 Intro")
         {
             isIntroLevel = true;
-        }
-    }
-    private void Awake()
-    {
-        if (score % 3000 == 0)
-        {
-            this.GetComponent<takingDamage>().lifeCount++;
         }
     }
     public IEnumerator Wait()
@@ -138,10 +133,18 @@ public class CameraLook : MonoBehaviour
             portalCanSpawn = false;
             Instantiate(Portal, Vector3.zero, Quaternion.identity);
         }
-        
-
+        if (score % 3000 == 0 && canIncrease && score!=0)
+        {
+            this.GetComponent<takingDamage>().lifeCount++;
+            canIncrease = false;
+            scoreChecker = score;
+        }
+        if (scoreChecker != score)
+        {
+            canIncrease = true;
+        }
     }
-
+    
     public void onLook(InputAction.CallbackContext l)
     {
         //Vector2 input = new Vector2();
