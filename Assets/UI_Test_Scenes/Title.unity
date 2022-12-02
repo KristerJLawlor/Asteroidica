@@ -215,6 +215,50 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114291122, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 117775642, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 382893559, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 645170337, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 810044268, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 994842476, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766244369, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864973537, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048061952, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122711258, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418095834014631495, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: price
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3418095834250423228, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: m_Name
       value: MainMenu
