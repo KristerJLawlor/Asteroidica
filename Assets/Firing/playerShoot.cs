@@ -13,6 +13,7 @@ public class playerShoot : MonoBehaviour
     public float ROF = .3f;
     public bool lastFire=false;
     public bool canShoot=false;
+    public bool canReplay = false;
     public WeaponIndicater indicater;
     public int mMissile;
 
@@ -34,6 +35,13 @@ public class playerShoot : MonoBehaviour
         yield return new WaitForSeconds(ROF);
         canShoot = true;
         mMissile = 2;
+    }
+
+    public IEnumerator AudioWait()
+    {
+        yield return new WaitForSeconds(2f);
+        canReplay = true;
+        
     }
     public void Attack(InputAction.CallbackContext c)
     {
@@ -107,9 +115,10 @@ public class playerShoot : MonoBehaviour
                 temp.transform.up = this.transform.forward;
                 temp.GetComponent<Rigidbody>().velocity = this.transform.forward * 32 + this.GetComponent<CameraLook>().myRig.velocity + this.transform.right * Random.Range(-1.0f, 1.0f) + this.transform.up * Random.Range(-1.0f, 1.0f);
 
-                    //play audio
-                    scattershotaudio.Play();
+                        //play audio
+                        scattershotaudio.Play();
                 }
+
             }
             if (selectedWeapon == laserCannonPrefab)
             {
@@ -118,8 +127,16 @@ public class playerShoot : MonoBehaviour
                 temp.GetComponent<Rigidbody>().transform.position = new Vector3(temp.GetComponent<Rigidbody>().transform.position.x, temp.GetComponent<Rigidbody>().transform.position.y -1f, temp.GetComponent<Rigidbody>().transform.position.z);
                 //USE THIS TO MOVE LAZER OFF CAMERA FACE
 
-                //play audio
-                lasercannonaudio.Play();
+
+                if (canReplay == true)
+                {
+                    //play audio
+                    lasercannonaudio.Play();
+                }
+                canReplay = false;
+                StartCoroutine(AudioWait());
+
+                
             }
             if (selectedWeapon == missilePrefab)
             {
