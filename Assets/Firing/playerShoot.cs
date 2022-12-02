@@ -39,7 +39,11 @@ public class playerShoot : MonoBehaviour
 
     public IEnumerator AudioWait()
     {
+        //play audio
         yield return new WaitForSeconds(2f);
+        lasercannonaudio.Play();
+        yield return new WaitForSeconds(2f);
+        
         canReplay = true;
         
     }
@@ -131,10 +135,13 @@ public class playerShoot : MonoBehaviour
                 if (canReplay == true)
                 {
                     //play audio
-                    lasercannonaudio.Play();
+                    //lasercannonaudio.Play();
+                    StartCoroutine(AudioWait());
+                    
                 }
+                
                 canReplay = false;
-                StartCoroutine(AudioWait());
+                
 
                 
             }
