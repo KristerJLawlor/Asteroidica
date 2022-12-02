@@ -10,6 +10,7 @@ public class takingDamage : MonoBehaviour
     public HealthBar healthbar;
     public LivesScript lifeCounter;
     public SceneChanger GoToNext;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +59,8 @@ public class takingDamage : MonoBehaviour
             HP = maxHP;
         }
         else
-        { 
-            //Back to level select
+        {
+            GoToNext.switchScenesLevel();
         }
     }
 
