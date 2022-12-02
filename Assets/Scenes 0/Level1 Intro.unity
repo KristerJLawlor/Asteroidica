@@ -3726,6 +3726,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 883821906676332015, guid: a80fc7177ef1786469cfca7eceaaed9a, type: 3}
   m_PrefabInstance: {fileID: 144755614}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &144755619 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1483024654842832690, guid: a80fc7177ef1786469cfca7eceaaed9a, type: 3}
+  m_PrefabInstance: {fileID: 144755614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &147486042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34728,6 +34733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 766972854500200861, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 6467570864196331361, guid: 180478e2b6a042e409f417d021c6e87e, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -40752,6 +40761,10 @@ PrefabInstance:
       propertyPath: indicater
       value: 
       objectReference: {fileID: 185819036}
+    - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
+      propertyPath: Ambientaudio
+      value: 
+      objectReference: {fileID: 144755619}
     - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: missileaudio
       value: 

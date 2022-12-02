@@ -23,12 +23,15 @@ public class playerShoot : MonoBehaviour
     public AudioSource scattershotaudio;    
     public AudioSource lasercannonaudio;
     public AudioSource missileaudio;
+    public AudioSource Ambientaudio;
 
     // Start is called before the first frame update
     void Start()
     {
         selectedWeapon = laserPrefab;
         mMissile = 2;
+
+        Ambientaudio.Play();
     }
     public IEnumerator Reload()
     {
