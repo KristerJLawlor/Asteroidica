@@ -49,13 +49,13 @@ public class playerShoot : MonoBehaviour
             {
                 indicater.setActiveWeapon(1);
                 selectedWeapon = scattershotPrefab;
-                scattershotPrefab.GetComponent<weaponScript>().TTL = .5f;
+                scattershotPrefab.GetComponent<weaponScript>().TTL = 1.15f;
             }
             else if (selectedWeapon == scattershotPrefab)
             {
                 indicater.setActiveWeapon(2);
                 selectedWeapon = laserCannonPrefab;
-                laserCannonPrefab.GetComponent<weaponScript>().TTL = 1;
+                laserCannonPrefab.GetComponent<weaponScript>().TTL = 1.5f;
                 ROF = .001f;
                 
             }
@@ -69,6 +69,7 @@ public class playerShoot : MonoBehaviour
             {
                 indicater.setActiveWeapon(0);
                 selectedWeapon = laserPrefab;
+                laserPrefab.GetComponent<weaponScript>().TTL = 2f;
                 ROF = .3f;
             }
         }

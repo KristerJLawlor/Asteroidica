@@ -7,7 +7,7 @@ public class DroneScript1 : MonoBehaviour
     //Attach script to enemy object
     public Rigidbody myRig;
 
-    public float SpawnTimer = 5f;
+    public float SpawnTimer = 10f;
     public GameObject DroneObject;
 
     public Vector3 SpawnLocation;
@@ -38,7 +38,9 @@ public class DroneScript1 : MonoBehaviour
             yield return new WaitForSeconds(SpawnTimer);
 
             //Spawn the drone
-            GameObject temp = Instantiate(DroneObject, SpawnLocation, Quaternion.identity);
+            GameObject temp1 = Instantiate(DroneObject, SpawnLocation + new Vector3(0, -5, 0), Quaternion.identity);
+            GameObject temp2 = Instantiate(DroneObject, SpawnLocation + new Vector3(5, 0, 0), Quaternion.identity);
+            GameObject temp3 = Instantiate(DroneObject, SpawnLocation + new Vector3(-5, 0, 0), Quaternion.identity);
 
 
         }

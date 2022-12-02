@@ -70,6 +70,8 @@ public class PyramidBossHealth : MonoBehaviour
         yield return new WaitForSeconds(2f);
         //StartCoroutine(SpawnPortal());
         GameObject.Destroy(this.gameObject);
+        
+        Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
 
     public void OnDestroy()
@@ -77,20 +79,10 @@ public class PyramidBossHealth : MonoBehaviour
         Debug.Log("made it to OnDestroy");
         
         //spawn the portal that allows passage to next level
-        Instantiate(Portal, Vector3.zero, Quaternion.identity);
+        //Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
 
     
-    /*
-     public IEnumerator SpawnPortal()
-    {
-        Debug.Log("made it to SpawnPortal");
-        //yield return new WaitForSeconds(2f);
-        
-        yield return new WaitForSeconds(4f);
-        Instantiate(Portal, Vector3.zero, Quaternion.identity);
-    }
-    */
 
 
     // Update is called once per frame

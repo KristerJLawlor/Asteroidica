@@ -7,7 +7,7 @@ public class DroneScript : MonoBehaviour
     //Attach script to enemy object
     public Rigidbody myRig;
 
-    public float SpawnTimer = 5f;
+    public float SpawnTimer = 7f;
     public GameObject DroneObject;
 
     public Vector3 SpawnLocation;

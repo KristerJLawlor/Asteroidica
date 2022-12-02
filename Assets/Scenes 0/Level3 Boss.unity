@@ -27883,7 +27883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRig: {fileID: 1202448866}
-  SpawnTimer: 5
+  SpawnTimer: 10
   DroneObject: {fileID: 3692118223414616364, guid: a4da64a4d2d29384989139ec555d2823, type: 3}
   SpawnLocation: {x: 0, y: 0, z: 0}
   PlayerLocation: {x: 0, y: 0, z: 0}
@@ -27921,7 +27921,7 @@ MonoBehaviour:
   ROF: 3
   lastFire: 0
   canShoot: 0
-  myRig: {fileID: 0}
+  myRig: {fileID: 1202448866}
 --- !u!4 &1203035069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5042085634438014751, guid: 65e618fb21869c240a0c6149f2311440, type: 3}

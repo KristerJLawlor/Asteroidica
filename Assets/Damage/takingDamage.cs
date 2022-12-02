@@ -19,8 +19,15 @@ public class takingDamage : MonoBehaviour
             collision.gameObject.tag != "Ammo" &&
             collision.gameObject.tag != "Portal")
         {
+            if (collision.gameObject.tag == "EnemyLaser")
+            {
+                HP -= 5;
+            }
+            else
+            {
+                HP -= 2;
+            }
             
-            HP-=2;
         }
         if (collision.gameObject.tag == "Drone")
         {

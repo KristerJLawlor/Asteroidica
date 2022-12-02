@@ -71,6 +71,9 @@ public class BugBossHealth : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         GameObject.Destroy(this.gameObject);
+
+        //spawn the portal that allows passage to next level
+        Instantiate(Portal, new Vector3(400, 6, -28), PortalRotation);
     }
 
     public void OnDestroy()
@@ -78,7 +81,7 @@ public class BugBossHealth : MonoBehaviour
         Debug.Log("made it to OnDestroy");
 
         //spawn the portal that allows passage to next level
-        Instantiate(Portal, new Vector3(400, 6, -28), PortalRotation);
+        //Instantiate(Portal, new Vector3(400, 6, -28), PortalRotation);
     }
 
 

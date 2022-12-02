@@ -69,6 +69,9 @@ public class PirateBossHealth : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         GameObject.Destroy(this.gameObject);
+
+        //spawn the portal that allows passage to next level
+        Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
 
     public void OnDestroy()
@@ -76,7 +79,7 @@ public class PirateBossHealth : MonoBehaviour
         Debug.Log("made it to OnDestroy");
 
         //spawn the portal that allows passage to next level
-        Instantiate(Portal, Vector3.zero, Quaternion.identity);
+        //Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
 
 
