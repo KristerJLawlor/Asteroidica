@@ -48,7 +48,7 @@ public class playerShoot : MonoBehaviour
         if (c.phase == InputActionPhase.Started)
         {
             lastFire = true;
-            if (lastFire)
+            if (lastFire && selectedWeapon==laserCannonPrefab)
             {
                 this.GetComponent<CameraLook>().canLook = false;
             }
