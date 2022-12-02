@@ -8,6 +8,7 @@ public class PirateBossHealth : MonoBehaviour
     public int HP = 500;
     public int MaxHP = 500;
     public ParticleSystem Explosion;
+    public GameObject Portal;
     void Start()
     {
         BossRig = GetComponent<Rigidbody>();
@@ -72,7 +73,10 @@ public class PirateBossHealth : MonoBehaviour
 
     public void OnDestroy()
     {
+        Debug.Log("made it to OnDestroy");
 
+        //spawn the portal that allows passage to next level
+        Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
 
 

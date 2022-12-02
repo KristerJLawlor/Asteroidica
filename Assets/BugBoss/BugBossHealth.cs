@@ -8,9 +8,12 @@ public class BugBossHealth : MonoBehaviour
     public int HP = 100;
     public int MaxHP = 100;
     public ParticleSystem Explosion;
+    public GameObject Portal;
+    public Quaternion PortalRotation;
     void Start()
     {
         BossRig = GetComponent<Rigidbody>();
+        PortalRotation = Quaternion.Euler(0, -90, 0);
     }
     public void OnTriggerEnter(Collider c)
     {
@@ -72,7 +75,10 @@ public class BugBossHealth : MonoBehaviour
 
     public void OnDestroy()
     {
+        Debug.Log("made it to OnDestroy");
 
+        //spawn the portal that allows passage to next level
+        Instantiate(Portal, new Vector3(693, 7, -28), PortalRotation);
     }
 
 

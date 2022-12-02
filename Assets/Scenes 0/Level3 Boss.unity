@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.066388585, g: 0.153346, b: 0.05804053, a: 1}
+  m_IndirectSpecularColor: {r: 0.06615649, g: 0.15344906, b: 0.0577884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27772,18 +27772,6 @@ MonoBehaviour:
   SpawnLocation: {x: 0, y: 0, z: 0}
   PlayerLocation: {x: 0, y: 0, z: 0}
   CanSpawn: 1
---- !u!114 &1202448870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202448857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a5d1985603b014c89feb30d248afe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1202448871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27797,9 +27785,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossRig: {fileID: 1202448866}
-  HP: 1500
+  HP: 100
   MaxHP: 1500
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
 --- !u!4 &1203035069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5042085634438014751, guid: 65e618fb21869c240a0c6149f2311440, type: 3}

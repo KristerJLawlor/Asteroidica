@@ -8,6 +8,7 @@ public class PyramidBossHealth : MonoBehaviour
     public int HP = 1500;
     public int MaxHP = 1500;
     public ParticleSystem Explosion;
+    public GameObject Portal;
     void Start()
     {
         BossRig = GetComponent<Rigidbody>();
@@ -67,13 +68,28 @@ public class PyramidBossHealth : MonoBehaviour
         Explode(this.transform.position + this.transform.forward * 20);
 
         yield return new WaitForSeconds(2f);
+        //StartCoroutine(SpawnPortal());
         GameObject.Destroy(this.gameObject);
     }
 
     public void OnDestroy()
     {
-
+        Debug.Log("made it to OnDestroy");
+        
+        //spawn the portal that allows passage to next level
+        Instantiate(Portal, Vector3.zero, Quaternion.identity);
     }
+
+    
+    /*public IEnumerator SpawnPortal()
+    {
+        Debug.Log("made it to SpawnPortal");
+        //yield return new WaitForSeconds(2f);
+        
+        yield return new WaitForSeconds(4f);
+        Instantiate(Portal, Vector3.zero, Quaternion.identity);
+    }
+    */
 
 
     // Update is called once per frame

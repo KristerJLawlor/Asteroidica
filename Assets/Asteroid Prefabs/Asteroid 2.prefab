@@ -288,7 +288,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5042085634437792145}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
   m_Name: 
@@ -340,8 +340,8 @@ MonoBehaviour:
   MaxHP: 2
   pickup: {fileID: 5502459497689702513, guid: 9f691eb5871d1d5429af31e79c8337be, type: 3}
   ammo: {fileID: 5502459497689702513, guid: a86fa8c5b5ef5e843bde5f1c49d9b14a, type: 3}
-  Cam: {fileID: 7476970275355913809, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
   score: 0
+  isDead: 0
 --- !u!1 &5042085634437796911
 GameObject:
   m_ObjectHideFlags: 0

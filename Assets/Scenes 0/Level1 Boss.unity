@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.26535106, g: 0.097446345, b: 0.012371785, a: 1}
+  m_IndirectSpecularColor: {r: 0.26530764, g: 0.09746974, b: 0.01193476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9045,9 +9045,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossRig: {fileID: 416762085}
-  HP: 100
+  HP: 10
   MaxHP: 100
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
+  PortalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!195 &416762104
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18563,6 +18565,10 @@ PrefabInstance:
     - target: {fileID: 5502459497689702513, guid: 4ae4e83f96fa67f428e9473b18c3fed4, type: 3}
       propertyPath: m_Name
       value: Stargate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502459497689702513, guid: 4ae4e83f96fa67f428e9473b18c3fed4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8793260793690985058, guid: 4ae4e83f96fa67f428e9473b18c3fed4, type: 3}
       propertyPath: m_RootOrder

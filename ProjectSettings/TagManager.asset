@@ -10,6 +10,7 @@ TagManager:
   - Drone
   - Drop
   - Ammo
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1732206, g: 0.1645535, b: 0.29666728, a: 1}
+  m_IndirectSpecularColor: {r: 0.17316318, g: 0.16457182, b: 0.29665613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2609,9 +2609,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossRig: {fileID: 195819008}
-  HP: 500
+  HP: 100
   MaxHP: 500
   Explosion: {fileID: 5404697505897789969, guid: f913788c6cf8eff4da2958ea85ee7511, type: 3}
+  Portal: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
 --- !u!54 &195819008 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8744766199418649419, guid: 5d783fffd52e17848bd2ec1c8bb2b697, type: 3}
