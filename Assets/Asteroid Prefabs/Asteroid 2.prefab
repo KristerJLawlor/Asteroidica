@@ -362,6 +362,7 @@ MonoBehaviour:
   scorethreshold: 2000
   score: 0
   isDead: 0
+  boom: {fileID: 0}
 --- !u!1 &5042085634437796911
 GameObject:
   m_ObjectHideFlags: 0

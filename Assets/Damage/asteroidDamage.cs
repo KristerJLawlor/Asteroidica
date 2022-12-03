@@ -16,6 +16,8 @@ public class asteroidDamage : MonoBehaviour
     public int scorethreshold = 2500;
     public int score;
     public bool isDead = false;
+
+    public AudioSource boom;
     
     void Start()
     {
@@ -56,6 +58,7 @@ public class asteroidDamage : MonoBehaviour
         GetComponent<AsteroidMovement>().Explode(this.transform.position - this.transform.forward * 3);
         GetComponent<AsteroidMovement>().Explode(this.transform.position + this.transform.forward * 3);
         yield return new WaitForSeconds(.75f);
+        //boom.Play();
         GameObject.Destroy(this.gameObject);
     }
 
