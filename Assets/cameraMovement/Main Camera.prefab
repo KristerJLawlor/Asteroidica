@@ -248,10 +248,10 @@ MonoBehaviour:
     m_ActionName: Player/weaponSwap[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InGame_PanelHandler, Assembly-CSharp
-        m_MethodName: setGamePanel
-        m_Mode: 3
+      - m_Target: {fileID: 7476970275355913802}
+        m_TargetAssemblyTypeName: CameraLook, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

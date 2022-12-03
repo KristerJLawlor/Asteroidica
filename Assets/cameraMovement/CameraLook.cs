@@ -80,6 +80,7 @@ public class CameraLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Debug.Log("God why " + Cursor.lockState);
             panelmaker.setGamePanel(1);
+            //SceneManager.LoadScene(1);
             Cursor.lockState = CursorLockMode.None;
             Debug.Log("God why " + Cursor.lockState);
         }
@@ -87,7 +88,7 @@ public class CameraLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("God why "+Cursor.lockState);
+        //Cursor.lockState = CursorLockMode.None;
         if (canLook)
         {
             pitchSpeed += (lastLook.y * rotSpeed) * -1;
