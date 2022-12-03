@@ -13,7 +13,7 @@ public class SceneChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("The scene name for the first scene is " + SceneManager.GetSceneAt(0).name);
+        //Debug.Log("The scene name for the first scene is " + SceneManager.GetSceneAt(0).name);
         SceneManager.sceneLoaded += SceneSwapper;
         MMC = GameObject.Find("MainMenu").GetComponent<MasterMenuController>();
     }

@@ -19292,6 +19292,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5042085634438014751, guid: 65e618fb21869c240a0c6149f2311440, type: 3}
   m_PrefabInstance: {fileID: 1264158754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1452368402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3315621249480760301, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315621249480760301, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bd3e89dec7edaa43a1ac9dfc0adfc5e, type: 3}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -573.8941
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -79.84596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 127.90381
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111642946, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927336534111643004, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
+      propertyPath: m_Name
+      value: LevelMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
 --- !u!1001 &1454859880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27950,11 +28015,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 883821906676332015, guid: a80fc7177ef1786469cfca7eceaaed9a, type: 3}
   m_PrefabInstance: {fileID: 1976824506}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1976824511 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7158300950825376906, guid: a80fc7177ef1786469cfca7eceaaed9a, type: 3}
-  m_PrefabInstance: {fileID: 1976824506}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1978887457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30398,7 +30458,7 @@ PrefabInstance:
     - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: Ambientaudio
       value: 
-      objectReference: {fileID: 1976824511}
+      objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913815, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: missileaudio
       value: 
