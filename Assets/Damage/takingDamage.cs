@@ -60,7 +60,8 @@ public class takingDamage : MonoBehaviour
         }
         if (HP <= 0 && lifeCount <= 0)
         {
-            Application.Quit();
+            Cursor.lockState = CursorLockMode.None;
+            GoToNext.switchScenesLevel();
         }
         
     }
