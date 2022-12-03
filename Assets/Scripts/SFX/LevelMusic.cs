@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelMusic : MonoBehaviour
 {
-
+    /*
     static LevelMusic instance;
 
     public AudioClip[] MusicClips;
@@ -85,4 +85,5 @@ public class LevelMusic : MonoBehaviour
             Audio.enabled = true;
         }
     }
+    */
 }
