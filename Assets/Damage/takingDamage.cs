@@ -58,9 +58,11 @@ public class takingDamage : MonoBehaviour
             lifeCount--;
             HP = maxHP;
         }
-        else
+        if (HP <= 0 && lifeCount <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             GoToNext.switchScenesLevel();
+            //Cursor.lockState = CursorLockMode.None;
         }
     }
 
