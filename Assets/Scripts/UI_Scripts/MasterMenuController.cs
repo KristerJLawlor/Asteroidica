@@ -51,7 +51,7 @@ public class MasterMenuController : MonoBehaviour
             {
                 if (unlockedScene < 6)
                 {
-                    Debug.Log("Dere she Is " + i + " and " + unlockedScene);
+                    //Debug.Log("Dere she Is " + i + " and " + unlockedScene);
                     if (i >= unlockedScene) 
                     { 
                         lvlButtons[i].interactable = false;
@@ -61,15 +61,11 @@ public class MasterMenuController : MonoBehaviour
                         lvlButtons[i].interactable = true;
                     }
                 }
-                /*else
-                {
-                    if (i + 1 > unlockedScene / 2)
-                        lvlButtons[i].interactable = false;
-                }*/
             }
         }
         else
         {
+            Debug.Log("hello");
             MM.gameObject.SetActive(false);
         }
     }

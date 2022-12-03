@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.SocialPlatforms.GameCenter;
+//using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.SceneManagement;
 

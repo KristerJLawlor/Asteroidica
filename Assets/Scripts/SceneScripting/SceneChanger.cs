@@ -36,7 +36,7 @@ public class SceneChanger : MonoBehaviour
             Destroy(this.gameObject);
         }*/
 
-        if (s.name != SceneManager.GetSceneByBuildIndex(8).name)
+        if (s.name != SceneManager.GetSceneByBuildIndex(9).name)
         {
             //Debug.Log("Setting beenUsed to true!");
             //beenUsed = true;
