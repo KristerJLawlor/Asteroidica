@@ -7,6 +7,7 @@ public class InGame_PanelHandler : MonoBehaviour
     // Start is called before the first frame update
     public GameObject p1;
     public GameObject p2;
+    //public int p;
     void Start()
     {
         

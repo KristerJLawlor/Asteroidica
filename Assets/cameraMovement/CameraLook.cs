@@ -39,8 +39,8 @@ public class CameraLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Application.targetFrameRate = 60;
-        Cursor.lockState=CursorLockMode.Locked;
         myRig = GetComponent<Rigidbody>();
         StartCoroutine(Wait());
         score = 0;
@@ -69,20 +69,26 @@ public class CameraLook : MonoBehaviour
         if (c.phase == InputActionPhase.Canceled)
         {
             lastInput = Vector3.zero;
-
         }
     }
     public void Pause(InputAction.CallbackContext p)
     {
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("God why " + Cursor.lockState);
         if ( p.phase == InputActionPhase.Performed)
         {
             Cursor.lockState = CursorLockMode.None;
+            Debug.Log("God why " + Cursor.lockState);
             panelmaker.setGamePanel(1);
+            //SceneManager.LoadScene(1);
+            Cursor.lockState = CursorLockMode.None;
+            Debug.Log("God why " + Cursor.lockState);
         }
     }
     // Update is called once per frame
     void Update()
     {
+        //Cursor.lockState = CursorLockMode.None;
         if (canLook)
         {
             pitchSpeed += (lastLook.y * rotSpeed) * -1;
@@ -117,7 +123,11 @@ public class CameraLook : MonoBehaviour
             Vector3 oldVel = new Vector3(myRig.velocity.x, 0, myRig.velocity.z);
             Vector3 velDif = newVel - oldVel;
             myRig.velocity += velDif.normalized * acceleration/3 * Time.deltaTime;
-            
+            /*Debug.Log(" " + panelmaker.p);
+            while(panelmaker.p == 1)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }*/
             
 
 

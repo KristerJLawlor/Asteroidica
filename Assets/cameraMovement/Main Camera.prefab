@@ -112,6 +112,7 @@ MonoBehaviour:
   scoreBar: {fileID: 0}
   panelmaker: {fileID: 0}
   ammoCounter: {fileID: 0}
+  resourceCounter: {fileID: 0}
   scenename: 
   isIntroLevel: 0
   scorethreshold: 5000
@@ -246,7 +247,19 @@ MonoBehaviour:
     m_ActionId: 2d5c7b8f-c0d9-4628-a242-33f5cedecc54
     m_ActionName: Player/weaponSwap[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7476970275355913802}
+        m_TargetAssemblyTypeName: CameraLook, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 14697668-c1e4-40e7-ab13-5866a87f4618
     m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
@@ -290,8 +303,13 @@ MonoBehaviour:
   ROF: 0.3
   lastFire: 0
   canShoot: 0
+  canReplay: 0
   indicater: {fileID: 0}
   mMissile: 0
+  defaultlaseraudio: {fileID: 0}
+  scattershotaudio: {fileID: 0}
+  lasercannonaudio: {fileID: 0}
+  missileaudio: {fileID: 0}
 --- !u!114 &7476970275355913814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +324,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 20
   maxHP: 20
+  lifeCount: 1
   healthbar: {fileID: 0}
+  lifeCounter: {fileID: 0}
+  GoToNext: {fileID: 0}
 --- !u!114 &7476970275355913806
 MonoBehaviour:
   m_ObjectHideFlags: 0
