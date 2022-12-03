@@ -41743,10 +41743,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 7476970275355913813, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1763379257}
     - target: {fileID: 7476970275355913814, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: GoToNext
       value: 
@@ -45421,6 +45417,14 @@ PrefabInstance:
     - target: {fileID: 525237821526347668, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_Name
       value: GamePanelMaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 525237822768474197, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1763379258}
+    - target: {fileID: 525237822768474197, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: switchScenesLevel
       objectReference: {fileID: 0}
     - target: {fileID: 932533296803720583, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_AnchoredPosition.y

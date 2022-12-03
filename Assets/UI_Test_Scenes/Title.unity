@@ -217,47 +217,52 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114291122, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 117775642, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 382893559, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 645170337, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 40
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 810044268, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 994842476, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1766244369, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1864973537, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2048061952, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 25
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2122711258, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 15
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418095833847982765, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: m_text
+      value: "WASD-Accelerte forward, left, backward, and right\n[SPACE]-Weapon rotation\nmouse-looking
+        \nmouse left click- shooting\n[Q]- open quit level panel"
       objectReference: {fileID: 0}
     - target: {fileID: 3418095834014631495, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: price
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3418095834250423228, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: m_Name
@@ -306,6 +311,14 @@ PrefabInstance:
     - target: {fileID: 3418095834250423235, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418095834554757376, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1346686322}
+    - target: {fileID: 3418095834554757376, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetScenes
       objectReference: {fileID: 0}
     - target: {fileID: 3418095834756188195, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
       propertyPath: m_BlockingMask.m_Bits
@@ -408,3 +421,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1346686317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3418095834554757378, guid: 85966d2fa0b99aa4699f0711359b28a9, type: 3}
+  m_PrefabInstance: {fileID: 783193309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1346686322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346686317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf09e1e8dd6b064591591f4f724f0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

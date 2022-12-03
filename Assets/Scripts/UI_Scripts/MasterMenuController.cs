@@ -49,7 +49,7 @@ public class MasterMenuController : MonoBehaviour
             MM.gameObject.SetActive(true);
             for (int i = 0; i < lvlButtons.Length; i++)
             {
-                if (unlockedScene < 4)
+                if (unlockedScene < 6)
                 {
                     Debug.Log("Dere she Is " + i + " and " + unlockedScene);
                     if (i >= unlockedScene) 

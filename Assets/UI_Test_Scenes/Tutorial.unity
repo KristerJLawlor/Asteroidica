@@ -176,10 +176,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
-      propertyPath: Portal
-      value: 
-      objectReference: {fileID: 5502459497689702513, guid: d08ca51c5af292c44868fbfa14ff2512, type: 3}
-    - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: scoreBar
       value: 
       objectReference: {fileID: 6467570864387931868}
@@ -191,10 +187,6 @@ PrefabInstance:
       propertyPath: ammoCounter
       value: 
       objectReference: {fileID: 1884432712}
-    - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
-      propertyPath: scorethreshold
-      value: 5000
-      objectReference: {fileID: 0}
     - target: {fileID: 7476970275355913802, guid: 8708f83df4cc8214cbca952bb2cf9753, type: 3}
       propertyPath: resourceCounter
       value: 

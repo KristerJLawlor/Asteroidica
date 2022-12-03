@@ -10,11 +10,11 @@ public class takingDamage : MonoBehaviour
     public HealthBar healthbar;
     public LivesScript lifeCounter;
     public SceneChanger GoToNext;
-
+    int oldResources;
     // Start is called before the first frame update
     void Start()
     {
-        
+        oldResources = PlayerPrefs.GetInt("Resource", 0);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -47,6 +47,8 @@ public class takingDamage : MonoBehaviour
         if (collision.gameObject.tag == "Drop")
         {
             this.GetComponent<CameraLook>().currency += 100;
+            oldResources += 100;
+            PlayerPrefs.SetInt("Resource",oldResources);
             GameObject.Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Portal")

@@ -13,7 +13,7 @@ public class ShoppingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //int resource = PlayerPrefs.GetInt("Resource", 1);
+        resource = PlayerPrefs.GetInt("Resource", 0);
     }
 
     // Update is called once per frame
