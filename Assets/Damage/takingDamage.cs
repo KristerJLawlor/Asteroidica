@@ -62,8 +62,8 @@ public class takingDamage : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             GoToNext.switchScenesLevel();
-            //Cursor.lockState = CursorLockMode.None;
         }
+        
     }
 
     // Update is called once per frame
