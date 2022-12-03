@@ -8162,6 +8162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePanelMaker
       objectReference: {fileID: 0}
+    - target: {fileID: 525237822452915190, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 932533296803720583, guid: db7bb5c927e5bc24db2a477aab46a049, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.6085205
@@ -25583,6 +25587,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3315621249480760301, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
@@ -25642,6 +25647,7 @@ PrefabInstance:
       value: LevelMusic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a49f00d3d497a974287cffd560de0fdb, type: 3}
 --- !u!4 &1779156524 stripped
 Transform:
