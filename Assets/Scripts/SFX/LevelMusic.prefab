@@ -45,16 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e07d2175bb2d13479e89f9fdf21db17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicClips:
-  - {fileID: 8300000, guid: ba2501ab59ee5cd42a36c25a9de77968, type: 3}
-  - {fileID: 8300000, guid: e0460c7e996b5f04fba2481abb346983, type: 3}
-  - {fileID: 8300000, guid: 8bd3e89dec7edaa43a1ac9dfc0adfc5e, type: 3}
-  - {fileID: 8300000, guid: f0db4bee303d03540865f964adca7784, type: 3}
-  - {fileID: 8300000, guid: 521dd5f113658f44089772546deefe8b, type: 3}
-  - {fileID: 8300000, guid: 9cbb0e1c1af066c459f8792ecf79d349, type: 3}
-  - {fileID: 8300000, guid: 7b04197dad13284479615a204bd52d32, type: 3}
-  - {fileID: 8300000, guid: f8ef79f4ce2b908438735d073ecd499a, type: 3}
-  Audio: {fileID: 0}
 --- !u!82 &3315621249480760301
 AudioSource:
   m_ObjectHideFlags: 0
