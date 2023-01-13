@@ -1,5 +1,6 @@
 # Asteroidica
-This is a Unity Game for Game Design 1.
+This is a Unity Game Project for Game Design 1 produced within a 2-3 week time period with a team of 3.
+It is currently in an Alpha stage.
 
 ![AsteroidicaPoster](https://user-images.githubusercontent.com/78580819/211973138-8c4d0bfb-fffc-4ed8-b80a-7baebecccddd.png)
 
